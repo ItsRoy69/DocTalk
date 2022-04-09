@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap');
+
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: #000000;
+}
+
+.navbar-ul {
+  display: flex;
+  align-items: center;
+}
+.navbar-ul li {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.navbar-link {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 20px;
+  line-height: 38px;
+  margin: 0px;
+  color: #000000;
+}
+
+.header {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  color: #000000;
+}
