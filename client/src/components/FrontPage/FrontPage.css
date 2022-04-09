@@ -1,0 +1,47 @@
+.banner__input button {
+    width: 150px;
+    min-height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background: #23286B;
+    color: #ffff;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-left: 10px
+}
+
+.banner__input {
+  display: flex;
+  text-align: center;
+}
+
+.frontpage {
+  background-color: #C9ECFF;
+  height: 400px;
+}
+
+.frontpage img{
+  width: 450px;
+  height: 400px;
+}
+
+
+.banners{
+  margin-top: 50px;
+}
+
+
+.head{
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+}
