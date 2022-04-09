@@ -1,0 +1,59 @@
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+}
+
+.card{
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+.card1{
+  background-image:url(../../images/service-1-dark.png);
+}
+
+.card2{
+  background-image:url(../../images/service-2-dark.png);
+}
+
+.card3{
+  background-image:url(../../images/service-3-dark.png);
+}
+
+.card4{
+  background-image:url(../../images/service-4-dark.png);
+}
+
+.card5{
+  background-image:url(../../images/service-5-dark.png);
+}
+
+.card6{
+  background-image:url(../../images/service-6-dark.png);
+}
+
+.py-5{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.servicecard h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.servicecard .btn{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+  text-align: center;
+}
