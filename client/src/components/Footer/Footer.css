@@ -1,0 +1,89 @@
+.footer{
+  background-color:	#ffff;
+  align-items: center;
+}
+
+.foot .footer__text{
+  text-align: center;
+}
+
+.foot .input {
+  text-decoration: none;
+  color: #0E185F;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+
+.contact__meta{
+  align-items: center;
+}
+
+.contact__meta p{
+  font-size: 15px;
+  text-align: center;
+}
+
+input.contact{
+    display: block;
+    width: 100%;
+    border: 2px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    height: 50px;
+    line-height: 46px;
+    margin: 20px 0px;
+    outline: none;
+    font-size: 15px;
+    letter-spacing: .1px;
+    background: none;
+}
+
+.image{
+  width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 300px;
+
+}
+
+textarea#message{
+    height: 100px;
+    padding: 0 20px;
+    width: 100%;
+    line-height: 46px;
+    font-size: 15px;
+    letter-spacing: .1px;
+    border: 2px solid rgba(0,0,0,.1);
+}
+
+
+button.btn.contact.pointer {
+    width: 150px;
+    min-height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background: #23286B;
+    color: #ffff;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-right: 480px;
+
+}
+
+button.btn.contact.pointer:hover {
+  background-color: #fff;
+  border: 2px solid #f9004d;
+  background-color: blueviolet!important;
+}
+
+
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-left: 60px;
+  margin-right: 10px;
+}
