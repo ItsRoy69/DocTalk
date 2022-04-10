@@ -1,6 +1,6 @@
 <p align="center">
 
-   ![DocTalk (1)](https://user-images.githubusercontent.com/72851613/162625548-813438e0-7d95-472a-8c30-16071e9777d6.png)
+![DocTalk (1)](https://user-images.githubusercontent.com/72851613/162625548-813438e0-7d95-472a-8c30-16071e9777d6.png)
 
    <h3 align="center">DocTalk</h3>
    <p align="center">Doctor just a click away</p>
@@ -12,7 +12,7 @@
 
 ## What is DocTalk ? 🤔
 
-A web application where we can find all the developers together. Developers can coordinate with others so whenever someone needs a new developer they can check this website .
+DocTalk is a website where one can arrive at for any doctor or medical-related problems and we will be catering to all of them. Be it ambulances, blood, plasma, oxygen cylinders, hospital beds, medicines - we have you covered. Just click on our website and you will be relieved of your medical-related stress.
 
 ## Important Links!
 
@@ -32,7 +32,7 @@ We faced a couple of challenges, but we did overcome a few of them. There was an
 
 ## Technologies we used 🔮
 
-![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 ## Getting started 💫
 
