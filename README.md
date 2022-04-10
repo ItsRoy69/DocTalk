@@ -1,7 +1,7 @@
 <p align="center">
 
    <h3 align="center">DocTalk</h3>
-   <p align="center">A Community Webapp!</p>
+   <p align="center">Doctor just a click away</p>
 </p>
 
 <div align="center">
@@ -22,7 +22,11 @@ Presentation Link:
 
 ## The problem it solves 🍊
 
+Calling for help can be a tedious task when someone, might even be our closed ones is in a close combat between life and death. To decrease the possibility of declined phone calls to nearby doctors and to increase the survival rates of our near and dear ones, we have brought to you DocTalk, a platform where one can book doctor appointments online, book ambulances, search for blood donors and even donate blood to the nearest blood donation sites, plasma donors and donate plasma at the nearest donating sites, find for hospital beds even in this pandemic of Covid19 situation, search for oxygen cylinders and even get their medicines online by our certified pharmacies – all under one online roof, DocTalk.
+
 ## Challenges we ran into 👩‍💻
+
+We faced a couple of challenges, but we did overcome a few of them. There was an issue with the API call, but we fixed it and we could not contact the real doctors over call because of budget or errors in communication.
 
 ## Technologies we used 🔮
 
