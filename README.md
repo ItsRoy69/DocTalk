@@ -78,3 +78,6 @@ npm run server
 <img src="./images/command.png" width="300px"> -->
 
 ## Our Team
+
+![hustlers](https://user-images.githubusercontent.com/72851613/162626799-62357dbb-f22a-4893-b4d0-0a671963458f.png)
+
