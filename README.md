@@ -1,54 +1,51 @@
-<p align="center">   
-   <img src="https://user-images.githubusercontent.com/78967360/161388846-cb73a1bd-4c7c-43fb-ab09-8a4395075434.png" width="100%">
+<p align="center">
+
+   ![DocTalk (1)](https://user-images.githubusercontent.com/72851613/162625548-813438e0-7d95-472a-8c30-16071e9777d6.png)
 
    <h3 align="center">DocTalk</h3>
-   <p align="center">A Community Webapp!</p>
+   <p align="center">Doctor just a click away</p>
 </p>
 
 <div align="center">
 
-![React JS](https://img.shields.io/badge/React.js-black?style=for-the-badge&logo=react&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=Netlify&logoColor=white)
-
 </div>
-
 
 ## What is DocTalk ? 🤔
 
-A web application where we can  find  all the developers together. Developers can coordinate with others so whenever someone needs a new developer they can check this website .
+A web application where we can find all the developers together. Developers can coordinate with others so whenever someone needs a new developer they can check this website .
 
- ## Important Links!
+## Important Links!
 
-Website Link: 
+Website Link:
 <br/>
-Youtube Link: 
+Youtube Link:
 <br/>
 Presentation Link:
 
-## Architecture of the website
-<img src="https://user-images.githubusercontent.com/78967360/161394079-d7fbe968-6189-4c05-bd11-f4e899f14b1e.png" width="100%">
+## The problem it solves 🍊
 
-<!-- ## Workflow of the Slack bot
-<img src="./images/slack-bot-workflow.png" width="100%">
+Calling for help can be a tedious task when someone, might even be our closed ones is in a close combat between life and death. To decrease the possibility of declined phone calls to nearby doctors and to increase the survival rates of our near and dear ones, we have brought to you DocTalk, a platform where one can book doctor appointments online, book ambulances, search for blood donors and even donate blood to the nearest blood donation sites, plasma donors and donate plasma at the nearest donating sites, find for hospital beds even in this pandemic of Covid19 situation, search for oxygen cylinders and even get their medicines online by our certified pharmacies – all under one online roof, DocTalk.
 
-## Chatterpay Dashboard
-<img src="./images/dashboard.png" width="100%"> -->
+## Challenges we ran into 👩‍💻
 
-## Getting started
+We faced a couple of challenges, but we did overcome a few of them. There was an issue with the API call, but we fixed it and we could not contact the real doctors over call because of budget or errors in communication.
+
+## Technologies we used 🔮
+
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+
+## Getting started 💫
 
 First, make sure you have all these installed on your local machine & then continue.
 
-* Node.js v16.13.1^
-* NPM v8.1.0^
+- Node.js v16.13.1^
+- NPM v8.1.0^
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/anomic30/Devcon-Ureckathon2022.git
+git clone https://github.com/ItsRoy69/DocTalk.git
 # Enter into the client
 cd client
 npm install
@@ -57,7 +54,9 @@ npm install
 cd server
 npm install
 ```
+
 ### ⚠️ Important!
+
 In order to use this for your own purpose, check the .env.example in each of the directories.
 
 ### Starting the application
@@ -68,6 +67,7 @@ npm run dev
 # To start the dashboard in server
 npm run server
 ```
+
 <!-- ## Bot Features & Commands
 
 * 💸 Pay a Discord user / Slack user
@@ -78,8 +78,3 @@ npm run server
 <img src="./images/command.png" width="300px"> -->
 
 ## Our Team
-
-<a href="https://github.com/anomic30/Chatterpay-discord-bot/graphs/contributors">
-  <img src="https://user-images.githubusercontent.com/78967360/161389591-4bb7b875-5c81-404c-9ae2-80bdc2e44d80.png" />
-</a>
-
