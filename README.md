@@ -1,5 +1,7 @@
 <p align="center">
 
+   ![DocTalk (1)](https://user-images.githubusercontent.com/72851613/162625548-813438e0-7d95-472a-8c30-16071e9777d6.png)
+
    <h3 align="center">DocTalk</h3>
    <p align="center">Doctor just a click away</p>
 </p>
