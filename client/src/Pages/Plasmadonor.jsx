@@ -99,6 +99,14 @@ const PlasmaDonorList = () => {
                   <td>O +</td>
                   <td>2 days ago</td>
                 </tr>
+                <tr>
+                  <td>Jyotirmoy Roy</td>
+                  <td>9051538825</td>
+                  <td>Kolkata</td>
+                  <td>-</td>
+                  <td>B +</td>
+                  <td>1 day ago</td>
+                </tr>
                </tbody>
             </table>
            </div>
