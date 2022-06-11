@@ -1,6 +1,6 @@
 <p align="center">
 
-![DocTalk (1)](https://user-images.githubusmtent.com/72851613/162625548-813438e0-7d95-472a-8c30-16071e9777d6.png)
+![Doctalk](https://user-images.githubusercontent.com/78967360/173169858-6e8af0e8-41c5-4f8a-9db6-717e6fac2d04.png)
 
    <h3 align="center">DocTalk</h3>
    <p align="center">Doctor just a click away</p>
@@ -14,70 +14,39 @@
 
 DocTalk is a website where one can arrive at for any doctor or medical-related problems and we will be catering to all of them. Be it ambulances, blood, plasma, oxygen cylinders, hospital beds, medicines - we have you covered. Just click on our website and you will be relieved of your medical-related stress.
 
-## Important Links!
-<!-- 
-Website Link:
-<br/> -->
-Youtube Link: https://youtu.be/WrnKeCbDY_w
-<!-- <br/>
-Presentation Link: -->
+## Willing to help ? 👩🏻‍💻
 
-## The problem it solves 🍊
+**A beginner to Open Source, Web Development ?**  
+<br/>
 
-Calling for help can be a tedious task when someone, might even be our closed ones is in a close combat between life and death. To decrease the possibility of declined phone calls to nearby doctors and to increase the survival rates of our near and dear ones, we have brought to you DocTalk, a platform where one can book doctor appointments online, book ambulances, search for blood donors and even donate blood to the nearest blood donation sites, plasma donors and donate plasma at the nearest donating sites, find for hospital beds even in this pandemic of Covid19 situation, search for oxygen cylinders and even get their medicines online by our certified pharmacies – all under one online roof, DocTalk.
+This might be the debut repo for you , you can contribute to this repo , solve the issues, raise one and learn more about web as well as get started with Open Source and contributing to projects. Remember , we believe in **Quality**.
 
-## Challenges we ran into 👩‍💻
+---
 
-We faced a couple of challenges, but we did overcome a few of them. There was an issue with the API call, but we fixed it and we could not contact the real doctors over call because of budget or errors in communication.
+## Hello Contributors 👋🏻
 
-## Technologies we used 🔮
+- **Take a look at the [Contributing Guidelines](CONTRIBUTING.md) for proper contributions**
+- **Take a look at the [Setup Guidelines](rules/Setup.md) to setup the react app locally**
 
-![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+---
 
-## Getting started 💫
+## Technologies used 💻
 
-First, make sure you have all these installed on your local machine & then continue.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
-- Node.js v16.13.1^
-- NPM v8.1.0^
+---
 
-### Installation
+## Best Contributors !! 🎭
 
-```bash
-# Clone the repository
-git clone https://github.com/ItsRoy69/DocTalk.git
-# Enter into the client
-cd client
-npm install
+<a href="https://github.com/ItsRoy69/DocTalk/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ItsRoy69/DocTalk" />
+</a>
 
-# Enter into server
-cd server
-npm install
-```
-
-### ⚠️ Important!
-
-In order to use this for your own purpose, check the .env.example in each of the directories.
-
-### Starting the application
-
-```bash
-# To start the dashboard in client
-npm run dev
-# To start the dashboard in server
-npm run server
-```
-
-<!-- ## Bot Features & Commands
-
-* 💸 Pay a Discord user / Slack user
-
-`/pay user_name amount`
-
-<br />
-<img src="./images/command.png" width="300px"> -->
-
-## Our Team
-
-![hustlers](https://user-images.githubusercontent.com/72851613/162626799-62357dbb-f22a-4893-b4d0-0a671963458f.png)
-
+---
+## Happy Contributions !!
