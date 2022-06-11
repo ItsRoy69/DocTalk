@@ -1,6 +1,6 @@
 # Issue name 📐
 
-- **I <your name here> have worked for <issue number> under JWOC**
+- **I <your name here> have worked for <issue number> under <Opensource Event>**
 
 [put x to check the boxes]: <> (This is a comment, it will not be included)
 
