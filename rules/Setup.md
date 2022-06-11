@@ -8,7 +8,7 @@
 - `git clone` to clone the repo
 
 - Now you have the repo in your **local storage**
-
+- You can acess the `client` folder to get the frontend
 - Next to setup the react app `npm install`
 - Once the node modules and other stuffs are installed , `npm start` to start the app in `http://localhost:3000/`
 - You can acess the `server` folder to get the backend and start it with `npm start` in `http://localhost:5000/`
