@@ -10,7 +10,7 @@
 - Each issue needs to be completed within a specific time limit according to its difficulty level ( **`Easy`: 1 day, `Medium`: 2-3 days and `Hard`: 4 days )**.
 - If a mentee is unable to solve the allotted issue within the given period, the issue needs to be passed to other contenders on the discretion of the mentor.
 
-- You will be performing changes to **`ItsRoy69-vesttech`** branch ONLY.
+- You will be performing changes to **`itsroy69-doctalk`** branch ONLY.
 - `Fork` the repo to your account.
 - `git clone` to clone the repo
 
