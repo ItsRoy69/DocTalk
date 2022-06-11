@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import LandingPage from "./Pages/Landingpage";
+import DoctorLogin from "./Pages/DoctorLogin";
 import Plasmadonor from "./Pages/Plasmadonor";
 import Hospitalbeds from "./Pages/Hospitalbeds";
 import Oxygensuppliers from "./Pages/Oxygensupply";
@@ -24,6 +25,7 @@ function App() {
                     {/* <Navbar /> */}
                     <Switch>
                         <Route path="/" exact component={LandingPage} />
+                        <Route path="/login/doctor" component={DoctorLogin} />
                         <Route path="/plasma" exact component={Plasmadonor} />
                         <Route path="/hospitalbeds" exact component={Hospitalbeds} />
                         <Route path="/oxygensupply" exact component={Oxygensuppliers} />
