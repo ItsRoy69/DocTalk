@@ -48,5 +48,11 @@ This might be the debut repo for you , you can contribute to this repo , solve t
   <img src="https://contrib.rocks/image?repo=ItsRoy69/DocTalk" />
 </a>
 
+
+---
+## 🙏 Support
+
+This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
+
 ---
 ## Happy Contributions !!
