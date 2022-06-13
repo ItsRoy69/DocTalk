@@ -45,7 +45,7 @@
 - Connect it with Razorpay to show the transaction .
 - Light and dark mode toggle switch.
 - Build a page after you signin which will show crypto graphs.
-- Check [here](https://github.com/ItsRoy69/VestTech/issues) for more.
+- Check [here](https://github.com/ItsRoy69/DocTalk/issues) for more.
 
 <br/>
 
