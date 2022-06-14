@@ -14,6 +14,8 @@ import Hospitalbedcontact from "./Pages/Hospitalbedcontact";
 import Oxygensupplycontact from "./Pages/Oxygensupplycontact";
 import Medssuppliercontact from "./Pages/Medssuppliercontact";
 import Ambulanceprovidercontact from "./Pages/Ambulanceprovidercontact";
+import Doctorcontact from "./Pages/Doctorcontact";
+import Doctorinfo from "./Pages/Doctorinfo";
 import Contact from "./Pages/Contact";
 import { useEffect } from "react";
 import Docstate from "./context/Docstate";
@@ -34,6 +36,7 @@ function App() {
                         <Route path="/hospitalbeds" exact component={Hospitalbeds} />
                         <Route path="/oxygensupply" exact component={Oxygensuppliers} />
                         <Route path="/medssupply" exact component={Medssuppliers} />
+                        <Route path="/doctorinfo" exact component ={Doctorinfo}/>
                         <Route
                             path="/ambulanceprovider"
                             exact
@@ -63,6 +66,11 @@ function App() {
                             path="/ambulanceprovidercontact"
                             exact
                             component={Ambulanceprovidercontact}
+                        />
+                        <Route 
+                            path="/doctorcontact"
+                            exact
+                            component ={Doctorcontact}
                         />
                         <Route path="/contact" exact component={Contact} />
                     </Switch>
