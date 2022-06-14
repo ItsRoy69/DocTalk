@@ -14,7 +14,9 @@ const Docstate = (props) => {
 
     const [ambu, setambu] = useState({ dname: "", ph: "", address: "", city: "", an: "" })
 
-    return (<Doccontext.Provider value={{ plasmadonor, setplasmadonor, hpbed, sethpbed, oxy, setoxy, meds, setmeds, ambu, setambu }}>
+    const [doctor, setdoctor] = useState({speciality:"",dname:"",ph:"",address:"", city:""})
+
+    return (<Doccontext.Provider value={{ plasmadonor, setplasmadonor, hpbed, sethpbed, oxy, setoxy, meds, setmeds, ambu, setambu, doctor, setdoctor }}>
 
         {props.children};
 
