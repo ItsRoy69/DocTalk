@@ -53,3 +53,13 @@ export const uploadAmbulance = async (ambu) => {
     alert("INTERNAL ERROR, PLEASE TRY AGAIN LATER");
   }
 };
+
+export const uploadDoctor = async (ambu) => {
+  try {
+    const Post = await Axios.post("http://localhost:5000/api/doctor", ambu);
+    return Post;
+  } catch (error) {
+    console.log(error);
+    alert("INTERNAL ERROR, PLEASE TRY AGAIN LATER");
+  }
+};

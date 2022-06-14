@@ -65,6 +65,18 @@ const Services = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="col p-2">
+                    <div className="card6 card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                    <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h2>Doctors</h2>
+                            <Link to="/doctorinfo" className="btn btn-warning btn-lg px-4 mt-2 mb-5"  target="_parent" role="button">
+                                View
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
               </div>
             </div>
 
