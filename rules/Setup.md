@@ -18,6 +18,8 @@
 - We have used **Bootsrap 5.0** for styling , css files are available in `src\styles`
 - You are also allowed to use GOOGLE FONTS for same fonts as of figma files.
 - Other extra **Pictures, icons , svgs** are to be kept in `src\assets\`
+- This website will be fully built in MERN Stack i.e MongoDB, ExpressJS, ReactJS, NodeJS.
+- For understanding of UI/UX check [here](https://www.figma.com/file/6qxdJMmXpIlXS3sWEAvVt8/Untitled?node-id=0%3A1)
 - Once you are done with the changes , `cd ..` to come to the root folder
 - `git pull` to pull the latest version of the code
 - `git add .` to stage for commits
