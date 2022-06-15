@@ -8,6 +8,7 @@ const HospitalRoutes = require("./routes/Hospital");
 const MedsRoutes = require("./routes/Meds");
 const OxygenRoutes = require("./routes/Oxygen");
 const AmbulanceRoutes = require("./routes/Ambulance");
+const {UserRoutes}=require('./routes/user');
 var cors = require("cors");
 
 const PORT = 5000;
@@ -32,13 +33,13 @@ mongoose
   });
 
 /* middleware */
-// app.use(morgan("dev"));
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: true,
-//   })
-// );
-// app.use(bodyParser.json());
+app.use(morgan("dev"));
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
+app.use(bodyParser.json());
 
 /* routes */
 app.get("/", (req, res) => {
@@ -50,6 +51,7 @@ app.use("/api", HospitalRoutes);
 app.use("/api", MedsRoutes);
 app.use("/api", OxygenRoutes);
 app.use("/api", AmbulanceRoutes);
+app.use("/api/user",UserRoutes);
 
 app.listen(PORT, () => {
   console.log("server is listening at port 5000");
