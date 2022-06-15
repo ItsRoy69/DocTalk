@@ -20,6 +20,7 @@ import Contact from "./Pages/Contact";
 import { useEffect } from "react";
 import Docstate from "./context/Docstate";
 import UserRegister from "./Pages/UserRegister";
+import Doctors from "./Pages/Doctors";
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
                         <Route path="/doctor/register" component={DoctorRegistration} />
                         <Route path="/user/register" component={UserRegister} />
                         <Route path="/plasma" exact component={Plasmadonor} />
+                        <Route path="/doctors" exact component={Doctors} />
                         <Route path="/hospitalbeds" exact component={Hospitalbeds} />
                         <Route path="/oxygensupply" exact component={Oxygensuppliers} />
                         <Route path="/medssupply" exact component={Medssuppliers} />
