@@ -10,13 +10,13 @@ const Home = () => {
     <>
       <Navbar />
       <div className="container">
-        {/* Banner
-        About */}
+        Banner
+        About
         <Services/>
-        {/* Be A Helping Hand
-        Contact         */}
+        Be A Helping Hand
+        Contact        
       </div>  
-      {/* <Footer /> */}
+      <Footer />
 
     </>
   )
