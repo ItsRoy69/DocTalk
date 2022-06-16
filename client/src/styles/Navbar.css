@@ -59,7 +59,9 @@
 }
 
 .navbar__links ul li a:hover {
-    color: #01A2F2;
+    color: #3029ff;
+    text-shadow: 0px 3px 6px rgba(48, 41, 255, 0.5); 
+
 }
 
 .navbar__hamburger-menu {
