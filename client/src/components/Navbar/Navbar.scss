@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+.navbar{
+  padding: 1rem;
+  display: flex;
+  @media screen and (max-width: 881px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .brand{
+    display: flex;
+    align-items: center;
+    flex-basis: 30%;
+    @media screen and (max-width: 881px) {
+      flex-basis: 100%;
+    }
+    .logo{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      img{
+        
+        position: absolute;
+      }
+      .img1{
+        width: 30px;
+        height: 33px;
+        left: 9px;
+        top: 7px;
+        
+      }
+      .img2{
+        
+        width: 41px;
+        height: 41px;
+      }
+    }
+  }
+  .navbar-content{
+    @media screen and (max-width: 881px) {
+      width: 100%;
+    }
+    transition: height 0.3s;
+    ul{
+      display: flex;
+      list-style: none;
+      align-items: center;
+      justify-content: end;
+      margin: 0;
+      gap: 2rem;
+      @media screen and (max-width: 881px) {
+        flex-direction: column;
+      }
+
+      .navbar-links{
+        text-decoration: none;
+        color: #000000;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .hamburger-menu{
+    position: absolute;
+    right: 19px;
+    top: 25px;
+  }
+}

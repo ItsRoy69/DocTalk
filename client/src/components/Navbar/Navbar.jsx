@@ -1,57 +1,109 @@
-import React from 'react';
-import './Navbar.css'
-import doctalk from '../../images/DocTalk.jpeg';
+import React, { useEffect, useState } from "react";
+import "./Navbar.scss";
+import innerLogo from "../../images/inner-logo.png";
+import outerLogo from "../../images/outer-logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ImCross } from "react-icons/im";
 
 import { BrowserRouter as Route, Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [closedNavbar, setClosedNavbar] = useState(true);
+  
+  return (
+    <>
+      <div
+        className="navbar"
+        style={
+          window.innerWidth <= 881
+            ? closedNavbar
+              ? { gap: "0" }
+              : { gap: "2rem" }
+            : {}
+        }
+      >
+        <div className="brand">
+          <div className="logo">
+            <img
+              src={innerLogo}
+              alt=""
+              style={{ zIndex: "100" }}
+              className="img1"
+            />
+            <img src={outerLogo} alt="" className="img2" />
+          </div>
+          <h3 style={{ marginBottom: "0.3rem" }}>DocTalk</h3>
+        </div>
+        <div
+          className="navbar-content"
+          style={
+            window.innerWidth <= 881
+              ? closedNavbar
+                ? { height: "0" }
+                : { height: "21rem" }
+              : {}
+          }
+        >
+          <ul
+            style={
+              window.innerWidth <= 881
+                ? closedNavbar
+                  ? { opacity: "0" }
+                  : { opacity: "1" }
+                : {}
+            }
+          >
+            <li>
+              <Link to={"/"} className="navbar-links">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to={"/"} className="navbar-links">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to={"/"} className="navbar-links">
+                Donors
+              </Link>
+            </li>
+            <li>
+              <Link to={"/"} className="navbar-links">
+                Donate
+              </Link>
+            </li>
+            <li>
+              <Link to={"/"} className="navbar-links">
+                Doctors
+              </Link>
+            </li>
+            <li>
+              <Link to={"/"} className="navbar-links">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {window.innerWidth <= 881 && (
+          closedNavbar ? 
 
-    return (
-        <>
-            <div style={{ paddingLeft: "40px", paddingRight: "90px" }} >
-                <nav className="navbar navbar-expand-lg navbar-light " >
-                    <div className="container-fluid">
-                        <h3 className="navbar-brand"><Link className="header" to={"/"}><img src={doctalk} alt="Image"/></Link></h3>
-
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-ul">
-                                <li className="nav-item home" >
-                                    <Link to={"/"} className="navbar-link">Home</Link>
-                                </li>
-                                <li className="nav-item home" >
-                                    <Link to={"/contact"} className="navbar-link">About Us</Link>
-                                </li>
-
-                                <li class="nav-item dropdown home">
-                                    <p className="navbar-link dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown">Donors</p>
-
-                                    <ul class="dropdown-menu">
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/medssupply">Meds Suppliers</a></li>
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/ambulanceprovider">Ambulance Providers</a></li>
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/plasma">Plasma Donors</a></li>
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/oxygensupply">Oxygen Suppliers</a></li>
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/hospitalbeds">Hospital Beds</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item dropdown home">
-                                    <p className="navbar-link dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown">Donate</p>
-
-                                    <ul class="dropdown-menu">
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/medssupplycontact">Send Meds</a></li>
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/ambulanceprovidercontact">Send Ambulance</a></li>
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/plasmadonorcontact">Send Plasma</a></li>
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/oxygensupplycontact">Send Oxygen</a></li>
-                                      <li style={{ margin: "0px" }} ><a class="dropdown-item" href="/hospitalbedcontact">Send Hospital Beds</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </>
-    );
+          <div
+            className="hamburger-menu"
+            onClick={() => {
+              setClosedNavbar(false);
+            }}
+          >
+            <GiHamburgerMenu size={28} />
+          </div>:
+          <ImCross size={28}  className="hamburger-menu"
+          onClick={() => {
+            setClosedNavbar(true);
+          }}/>
+        )}
+      </div>
+    </>
+  );
 };
 
 export default Navbar;
