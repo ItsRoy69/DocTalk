@@ -193,7 +193,6 @@
     border: none;
     outline: none;
     box-shadow: 5px 5px 2px #d6d6d6;
-    max-width: 80%;
     padding: 1rem;
   }
   
@@ -251,5 +250,10 @@
 
   .contact__form__button {
     max-width: 15rem;
+  }
+
+  .contact__form__email,
+  .contact__form__name {
+    max-width: 80%;
   }
 }
