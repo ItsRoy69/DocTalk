@@ -84,7 +84,7 @@
 
 .navbar__mobile-side-nav{
     background-color: black;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     height: 100%;
@@ -149,6 +149,7 @@
     background-color: black;
     opacity: 0.5;
     inset: 0 0 0 0;
+    z-index: 9999;
 }
 
 .navbar__shadow--show{
