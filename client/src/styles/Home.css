@@ -223,7 +223,6 @@
     box-shadow: rgba(48, 41, 255, 0.5) 0px 5px 15px;
     border: 2px solid transparent;
     transition: .2s;
-    max-width: 15rem;
   }
 
   .contact__form__button:hover {
@@ -248,5 +247,9 @@
 @media (min-width:750px){
   .contact__main {
     flex-direction: row;
+  }
+
+  .contact__form__button {
+    max-width: 15rem;
   }
 }
