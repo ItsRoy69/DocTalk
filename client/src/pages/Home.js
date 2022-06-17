@@ -92,7 +92,7 @@ const Home = () => {
                 </button>
               </div>
               <div className="contact__rightImage">
-                <img src={contact} alt="" />
+                <img src={contact} alt="contact-us" width="500" height="500" />
               </div>
             </div>
           </div>   
