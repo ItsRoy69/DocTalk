@@ -59,7 +59,9 @@
 }
 
 .navbar__links ul li a:hover {
-    color: #01A2F2;
+    color: #3029ff;
+    text-shadow: 0px 3px 6px rgba(48, 41, 255, 0.5); 
+
 }
 
 .navbar__hamburger-menu {
@@ -82,7 +84,7 @@
 
 .navbar__mobile-side-nav{
     background-color: black;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     height: 100%;
@@ -147,6 +149,7 @@
     background-color: black;
     opacity: 0.5;
     inset: 0 0 0 0;
+    z-index: 9999;
 }
 
 .navbar__shadow--show{
