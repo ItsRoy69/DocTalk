@@ -3,7 +3,7 @@
 ![Doctalk](https://user-images.githubusercontent.com/78967360/173169858-6e8af0e8-41c5-4f8a-9db6-717e6fac2d04.png)
 
    <h3 align="center">DocTalk</h3>
-   <p align="center">Doctor just a click away</p>
+   <p align="center">MediHelp just a click away</p>
 </p>
 
 <div align="center">
