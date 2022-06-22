@@ -13,6 +13,7 @@ import RegOxygenSupply from './pages/RegOxygenSupply.js';
 import RegAmbulance from './pages/RegAmbulance.js';
 import RegDoctor from './pages/RegDoctor.js';
 import RegMedicine from './pages/RegMedicine.js';
+import PatientsRegistration from './pages/PatientsRegistration.js';
 
 
 
@@ -35,6 +36,7 @@ const App = () => {
           <Route exact path="/regambulances" element={ <RegAmbulance />} />
           <Route exact path="/regdoctors" element={ <RegDoctor />} />
           <Route exact path="/regmedicines" element={ <RegMedicine />} />
+          <Route exact path="/patientsregistration" element={<PatientsRegistration/>}/>
         </Routes>   
       </Router>
     </div>
