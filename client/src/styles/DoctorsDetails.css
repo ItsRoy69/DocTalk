@@ -1,0 +1,23 @@
+.doctors-details {
+  display: flex;
+  justify-content: space-between;
+  background: #3832F3;
+box-shadow: inset -100px 0px 80px 20px rgba(255, 255, 255, 0.2);
+border-radius: 20px;
+width: 100%;
+padding: 1.4rem 4rem;
+align-items: center;
+margin: 1.4rem 0;
+}
+.doctors-details .details h5 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  color: #ffffff;
+}
+@media screen and (max-width: 548px) {
+    .doctors-details {
+        flex-direction: column-reverse;
+  }
+}
