@@ -1,5 +1,4 @@
 import React from 'react'
-// RiHospitalLine
 import { RiHospitalLine } from 'react-icons/ri';
 import { FaStethoscope } from 'react-icons/fa';
 import { BsPersonSquare,BsTelephoneFill,BsGlobe,BsBuilding } from 'react-icons/bs';

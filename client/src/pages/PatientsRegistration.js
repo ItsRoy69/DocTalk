@@ -1,13 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import "../styles/PatientsRegistration.css";
-import name from "../assets/images/PersonSquare.png";
-import country from "../assets/images/Globe.png";
-import phone from "../assets/images/TelephoneFill.png";
-import city from "../assets/images/Building.png";
-import address from "../assets/images/HouseFill.png";
-import bloodGroup from "../assets/images/DropletHalf.png";
-import mail from "../assets/images/EnvelopeFill.png";
 import { BsPersonSquare,BsTelephoneFill,BsGlobe,BsBuilding,BsFillHouseFill,BsDropletHalf,BsEnvelopeFill } from 'react-icons/bs';
 
 function PatientsRegistration() {
