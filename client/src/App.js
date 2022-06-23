@@ -14,6 +14,7 @@ import RegAmbulance from './pages/RegAmbulance.js';
 import RegDoctor from './pages/RegDoctor.js';
 import RegMedicine from './pages/RegMedicine.js';
 import PatientsRegistration from './pages/PatientsRegistration.js';
+import DoctosRegistration from './pages/DoctosRegistration.js';
 
 
 
@@ -37,6 +38,7 @@ const App = () => {
           <Route exact path="/regdoctors" element={ <RegDoctor />} />
           <Route exact path="/regmedicines" element={ <RegMedicine />} />
           <Route exact path="/patientsregistration" element={<PatientsRegistration/>}/>
+          <Route exact path="/doctorsregistration" element={<DoctosRegistration/>}/>
         </Routes>   
       </Router>
     </div>
