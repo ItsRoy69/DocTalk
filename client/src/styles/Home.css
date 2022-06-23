@@ -73,6 +73,32 @@
 
 /* ----------------------------------------------------------------------------------- */
 
+.about-container {
+  background: #3029ff;
+  box-shadow: 10px 10px 10px rgba(48, 41, 255, 0.7);
+  border-radius: 40px;
+  padding: 1.5rem 2rem;
+  margin: 3rem 0;
+}
+.about-container p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 39px;
+  text-align: justify;
+
+  color: #ffffff;
+}
+.about-container h3 {
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 61px;
+  color: #ffffff;
+}
+
 /* --------------------------Services----------------------------------------------------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
@@ -137,8 +163,7 @@
 }
 
 /* ----------------------------------------------------------------------------------- */
-.helping-hand{
-
+.helping-hand {
   margin-bottom: 2rem;
 }
 .helping-hand h4 {
