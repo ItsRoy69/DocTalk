@@ -15,6 +15,7 @@ import helpingHand3 from "../assets/images/helpingHand3.png";
 import helpingHand4 from "../assets/images/helpingHand4.png";
 import helpingHand5 from "../assets/images/helpingHand5.png";
 import helpingHand6 from "../assets/images/helpingHand6.png";
+import { BsPersonSquare,BsEnvelopeFill,BsFillBookmarkFill,BsMessenger } from 'react-icons/bs';
 
 import "../styles/Home.css";
 
@@ -35,10 +36,7 @@ const Home = () => {
             <img src={headingPhoto} alt="heading" width="600" height="600" />
           </div>
         </div>
-        <div className="about-container">
-          <h3>About Us</h3>
-          <p>DocTalk is your ultimate medical help space. Here, at DocTalk you will be helped with all the services catering towards the medical field like Plasma donors’ hospital beds oxygen suppliers medicine suppliers and ambulance providers. DocTalk is your one step solution. Just log into your account and book your appointment right away. you can even call us for your appointment, and we will get back to you shortly.</p>
-        </div>
+        <div className="about">About</div>
         <div className="services">
           <h4>Services</h4>
           <div className="services-container">
@@ -112,7 +110,12 @@ const Home = () => {
                 <img src={helpingHand1} alt="" />
               </div>
               <h5>Ambulance</h5>
-              <p>Sometimes booking an ambulance might be a very hectic task as ambulances might not be available while you are in an emergency. To make matters a bit better for everyone list an ambulance provider down below.</p>
+              <p>
+                Sometimes booking an ambulance might be a very hectic task as
+                ambulances might not be available while you are in an emergency.
+                To make matters a bit better for everyone list an ambulance
+                provider down below.
+              </p>
               <button className="view-btn">View</button>
             </div>
             <div className="helping-box">
@@ -120,7 +123,11 @@ const Home = () => {
                 <img src={helpingHand2} alt="" />
               </div>
               <h5>Oxygen</h5>
-              <p>In the era of the pandemic of Covid-19, the world has seen a shortage of oxygen supply. To put an end to it we request you to click the button below to list an oxygen supplier you know of.</p>
+              <p>
+                In the era of the pandemic of Covid-19, the world has seen a
+                shortage of oxygen supply. To put an end to it we request you to
+                click the button below to list an oxygen supplier you know of.
+              </p>
               <button className="view-btn">View</button>
             </div>
             <div className="helping-box">
@@ -128,7 +135,14 @@ const Home = () => {
                 <img src={helpingHand3} alt="" />
               </div>
               <h5>Plasma</h5>
-              <p>Every drop off the plasma you donate can help a person to come back from doom’s door. So, for the sake of a human life, a life which you will be able to save only if you just step up and donate. click on the button below to add yourself or someone you know who is willing to donate plasma onto our list of plasma donors.</p>
+              <p>
+                Every drop off the plasma you donate can help a person to come
+                back from doom’s door. So, for the sake of a human life, a life
+                which you will be able to save only if you just step up and
+                donate. click on the button below to add yourself or someone you
+                know who is willing to donate plasma onto our list of plasma
+                donors.
+              </p>
               <button className="view-btn">View</button>
             </div>
             <div className="helping-box">
@@ -136,7 +150,13 @@ const Home = () => {
                 <img src={helpingHand4} alt="" />
               </div>
               <h5>Medicines</h5>
-              <p>In there of everything being online why will one have to go to the pharmacy to pick up the medicines? Add yourself by clicking the button below, or someone you know of as a medicine supplier so that the ones in need can get their medicines supplied to them.</p>
+              <p>
+                In there of everything being online why will one have to go to
+                the pharmacy to pick up the medicines? Add yourself by clicking
+                the button below, or someone you know of as a medicine supplier
+                so that the ones in need can get their medicines supplied to
+                them.
+              </p>
               <button className="view-btn">View</button>
             </div>
             <div className="helping-box">
@@ -144,7 +164,11 @@ const Home = () => {
                 <img src={helpingHand5} alt="" />
               </div>
               <h5>Doctor</h5>
-              <p>In this 21st Century,  you can also register yourself as a doctor if you are licensed. You can help millions of people through consultation by registering under this website.</p>
+              <p>
+                In this 21st Century, you can also register yourself as a doctor
+                if you are licensed. You can help millions of people through
+                consultation by registering under this website.
+              </p>
               <button className="view-btn">View</button>
             </div>
             <div className="helping-box">
@@ -152,7 +176,12 @@ const Home = () => {
                 <img src={helpingHand6} alt="" />
               </div>
               <h5>Hospital Beds</h5>
-              <p>For the sake of a human life, a life which you will be able to save only if you just step up and donate. click on the button below to add yourself or someone you know who is willing to donate plasma onto our list of plasma donors.</p>
+              <p>
+                For the sake of a human life, a life which you will be able to
+                save only if you just step up and donate. click on the button
+                below to add yourself or someone you know who is willing to
+                donate plasma onto our list of plasma donors.
+              </p>
               <button className="view-btn">View</button>
             </div>
           </div>
@@ -161,25 +190,38 @@ const Home = () => {
           <div className="contact__heading">Contact Us</div>
           <div className="contact__main">
             <div className="contact__form">
-              <input
-                type="text"
-                className="contact__form__name"
-                placeholder="Name"
-              />
-              <input
-                type="text"
-                className="contact__form__email"
-                placeholder="Email"
-              />
-              <input
-                type="text"
-                className="contact__form__subject"
-                placeholder="Subject"
-              />
-              <textarea
-                className="contact__form__message"
-                placeholder="Message"
-              />
+              <div className="input_container">
+                <BsPersonSquare size={40} color="#0603E6"/>
+                <input
+                  type="text"
+                  className="contact__form__name"
+                  placeholder="Name"
+                />
+              </div>
+              <div className="input_container">
+                <BsEnvelopeFill size={40} color="#0603E6"/>
+                <input
+                  type="text"
+                  className="contact__form__email"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div className="input_container">
+                <BsFillBookmarkFill size={40} color="#0603E6"/>
+                <input
+                  type="text"
+                  className="contact__form__subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <div className="input_container">
+                <BsMessenger size={40} color="#0603E6"/>
+                <textarea
+                  className="contact__form__message"
+                  placeholder="Message"
+                />
+              </div>
               <button className="contact__form__button" type="submit">
                 Contact
               </button>

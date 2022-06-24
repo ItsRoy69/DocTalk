@@ -73,32 +73,6 @@
 
 /* ----------------------------------------------------------------------------------- */
 
-.about-container {
-  background: #3029ff;
-  box-shadow: 10px 10px 10px rgba(48, 41, 255, 0.7);
-  border-radius: 40px;
-  padding: 1.5rem 2rem;
-  margin: 3rem 0;
-}
-.about-container p {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 39px;
-  text-align: justify;
-
-  color: #ffffff;
-}
-.about-container h3 {
-  font-family: "Alatsi";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 61px;
-  color: #ffffff;
-}
-
 /* --------------------------Services----------------------------------------------------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
@@ -285,26 +259,35 @@
   font-family: "Montserrat";
 }
 
-.contact__form__email,
-.contact__form__name {
-  border: none;
-  outline: none;
-  box-shadow: 5px 5px 2px #d6d6d6;
-  padding: 1rem;
+.input_container {
+  background: #ffffff;
+  border: 1px solid #0603e6;
+  border-radius: 12px;
+  padding: 0.6rem;
+  display: flex;
+  gap: 0.4rem;
 }
 
-.contact__form__subject {
+.input_container input {
+  width: 100%;
+  height: 40px;
   border: none;
   outline: none;
-  box-shadow: 5px 5px 2px #d6d6d6;
-  padding: 1rem;
 }
-
-.contact__form__message {
+.input_container input ::placeholder {
+  font-family: "Aksara Bali Galang";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 86px;
+  color: rgba(0, 0, 0, 0.25);
+}
+.input_container textarea {
+  width: 100%;
   border: none;
   outline: none;
-  box-shadow: 5px 5px 2px #d6d6d6;
-  padding: 1rem;
+  height: 160px;
+  padding: 8px 0;
 }
 
 .contact__form__button {
@@ -324,15 +307,6 @@
   background-color: transparent;
   border: 2px solid #3029ff;
   color: #3029ff;
-}
-
-::placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 49px;
-  color: #000000;
 }
 
 /* Media Queries */
