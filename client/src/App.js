@@ -11,7 +11,6 @@ import DonatePlasma from './pages/DonatePlasma.js';
 import RegHospitalBed from './pages/RegHospitalBed.js';
 import RegOxygenSupply from './pages/RegOxygenSupply.js';
 import RegAmbulance from './pages/RegAmbulance.js';
-import RegDoctor from './pages/RegDoctor.js';
 import RegMedicine from './pages/RegMedicine.js';
 import PatientsRegistration from './pages/PatientsRegistration.js';
 import DoctosRegistration from './pages/DoctosRegistration.js';
@@ -35,7 +34,6 @@ const App = () => {
           <Route exact path="/reghospitalbed" element={ <RegHospitalBed />} />
           <Route exact path="/regoxygensuppliers" element={ <RegOxygenSupply />} />
           <Route exact path="/regambulances" element={ <RegAmbulance />} />
-          <Route exact path="/regdoctors" element={ <RegDoctor />} />
           <Route exact path="/regmedicines" element={ <RegMedicine />} />
           <Route exact path="/patientsregistration" element={<PatientsRegistration/>}/>
           <Route exact path="/doctorsregistration" element={<DoctosRegistration/>}/>
