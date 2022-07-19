@@ -1,68 +1,104 @@
-.footer-container{
-    background: rgba(48, 41, 255, 0.7);;
-    padding: 0.8rem;
+.footer-container {
+    background: #2c6293;
+    padding: 5rem 8rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+.logo-title-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 28%;
+  flex-wrap: wrap;
+  padding-left: 5px;
 }
-.footer-logo-container{
-    flex-basis: 40%;
+
+.logo-title-container p {
+  display: flex;
+  font-weight: 500;
+  font-size: 17px;
+  font-style: italic;
 }
-.footer-container .footer-logo{
-    width: 5rem;
-    height: 5rem;
+
+.logo-title-container h3 {
+  display: flex;
 }
-.footer-container .logo-title{
-    display: flex;
-    align-items: center;
+
+.footer-logo {
+  width: 7rem;
+  height: 7rem;
 }
-.footer-container .footer-logo img{
-    width: 100%;
-    height: 100%;
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
 }
-.footer-container .footer-logo-container p{
-    font-size: 36px;
-    margin: 0;
-    margin-top: -10px;
+
+.footer-section {
+  flex-basis: 24%;
 }
-.footer-container .footer-section{
-    flex-basis: 20%;
+
+.footer-section p {
+  font-weight: 500;
+  font-size: 17px;
+  font-style: italic;
+  margin: 0;
 }
-.footer-container .footer-section p{
-    font-size: 20px;
-    margin: 0;
+
+.footer-section p a:hover{ 
+    color: white;
 }
-.footer-container .footer-section p a{
-    text-decoration: none;
-    color: black;
+
+.footer-section p a {
+  color: black;
 }
 
 @media screen and (max-width: 1152px) {
-    .footer-container .footer-logo-container p{
-        font-size: 24px;
-    } 
+  .footer-container .footer-logo-container p {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 1087px) {
-    .footer-container .footer-section{
-        flex-basis: 39%;
-        margin-top: 0.5rem;
-    }
-    
+  .footer-container { 
+    padding: 4rem 5rem;
+  }
+  .footer-section {
+    /* flex-basis: 40%; */
+    margin-top: 0.5rem;
+  }
 }
-@media screen and (max-width: 725px) {
 
-    .footer-container .footer-logo-container p{
-        font-size: 20px;
-    } 
-    
-}
 @media screen and (max-width: 725px) {
-    
-    .footer-container {
-        gap: 1.5rem;
-    } 
-    .footer-container .footer-logo-container p{
-        font-size: 17px;
-    } 
-    
+  .footer-container {
+    padding: 5rem 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-title-container {
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+  }
+  .logo-title-container p {
+    font-size: 17px;
+  }
+
+  .footer-logo {
+    align-self: center;
+    width: 8rem;
+    height: 8rem;
+  }
+  .logo-title-container h3 {
+    align-self: center;
+  }
+  .footer-section {
+    text-align: center;
+    align-self: center;
+    padding-bottom: 1rem;
+  }
+  .footer-section p {
+    font-size: 18px;
+    padding: 0.1rem;
+  }
 }

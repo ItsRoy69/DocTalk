@@ -3,21 +3,22 @@ import "../styles/Footer.css";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
+import { FiTwitter, FiInstagram, FiFacebook } from "react-icons/fi";
+
 const Footer = () => {
   return (
     <>
       <div className="footer-container">
-        <div className="footer-logo-container">
-          <div className="logo-title">
-            <div className="footer-logo">
-              <img src={logo} alt="logo" />
-            </div>
-            <h2>DocTalk</h2>
+        <div className="logo-title-container">
+          <div className="footer-logo">
+            <img src={logo} alt="logo" />
           </div>
-          <p>MedHelp just a click away</p>
+          <h3 style={{ fontSize: "25px", fontWeight: "700" }}>DocTalk</h3>
+          <p>MedHelp Just A Click Away !</p>
         </div>
+
         <div className="footer-section">
-          <h4 style={{ fontSize: "32px",fontWeight:"700" }}>Services</h4>
+          <h3 style={{ fontSize: "25px", fontWeight: "700" }}>Services</h3>
           <p>
             <Link to="/">Oxygen Supplier</Link>
           </p>
@@ -38,7 +39,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="footer-section">
-          <h4 style={{ fontSize: "32px",fontWeight:"700" }}>Help</h4>
+          <h3 style={{ fontSize: "25px", fontWeight: "700" }}>Help</h3>
           <p>
             <Link to="/">Oxygen Supplier</Link>
           </p>
@@ -59,17 +60,22 @@ const Footer = () => {
           </p>
         </div>
         <div className="footer-section">
-          <h4 style={{ fontSize: "32px",fontWeight:"700" }}>Links</h4>
+          <h3 style={{ fontSize: "25px", fontWeight: "700" }}>Social</h3>
           <p>
-            <Link to="/">Instagram</Link>
+            <Link to="/">
+              <FiInstagram /> Instagram
+            </Link>
           </p>
           <p>
-            <Link to="/">Facebook</Link>
+            <Link to="/">
+              <FiFacebook /> Facebook
+            </Link>
           </p>
           <p>
-            <Link to="/">Twitter </Link>
+            <Link to="/">
+              <FiTwitter /> Twitter{" "}
+            </Link>
           </p>
-          
         </div>
       </div>
     </>
