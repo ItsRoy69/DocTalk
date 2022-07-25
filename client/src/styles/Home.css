@@ -31,18 +31,17 @@
   font-weight: bold;
 }
 
-.heading__info__cta {
-  margin-top: 1rem;
+.heading__info__cta {  
   border: none;
-  background-color: #3029ff;
-  padding: 0.5rem;
-  border-radius: 50px;
+  background-color: #3029ff;  
+  border-radius: 30px;
   color: white;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 1vw, 1rem);
   font-weight: bold;
+  width: 150px;
   box-shadow: rgba(48, 41, 255, 0.5) 0px 5px 15px;
   border: 2px solid transparent;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 .heading__info__cta:hover {
@@ -114,8 +113,10 @@
   border-radius: 20px;
   color: #ffffff;
   z-index: 2;
-  font-weight: 500;
   transition: 0.2s;
+  border: none;
+  text-align: center;
+  padding: 0.7rem;
 }
 
 .services .services-container .service-box .view-btn:hover {
@@ -149,13 +150,13 @@
 }
 .helping-hand .helping-container {
   display: flex;
-  gap: 0.4rem;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 .helping-hand .helping-container .helping-box {
-  width: 366px;
-  height: 600px;
+  width: 300px;
+  height: 500px;
   padding: 1rem 1.5rem;
   background: #ffffff;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -164,8 +165,8 @@
   position: relative;
 }
 .helping-hand .helping-container .helping-box .image-container {
-  width: 90%;
-  height: 211px;
+  width: 220px;
+  height: 100px;
   display: flex;
   margin: auto;
   justify-content: center;
@@ -173,19 +174,19 @@
   background: #ffffff;
   box-sizing: border-box;
   border: 1px solid #3029ff;
-  box-shadow: 20px 20px 60px rgba(48, 41, 255, 0.7);
+  box-shadow: 5px 5px 20px rgba(48, 41, 255, 0.7);
   border-radius: 20px;
   margin-bottom: 1.3rem;
 }
 .helping-hand .helping-container .helping-box .image-container img {
-  width: 85%;
-  height: 90%;
+  width: 50%;
+  height: 80%;
 }
 .helping-hand .helping-container .helping-box h5 {
   font-family: "Alatsi", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 30px;
   text-align: center;
 }
 .helping-hand .helping-container .helping-box p {
@@ -200,7 +201,6 @@
   width: 124px;
   height: 33px;
   background: #3029ff;
-  box-shadow: 5px 20px 60px rgba(48, 41, 255, 0.7);
   border-radius: 20px;
   color: #ffffff;
   z-index: 2;
@@ -210,6 +210,9 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  border: none;
+  text-align: center;
+  padding: 0.2rem;
 }
 
 .helping-hand .helping-container .helping-box .view-btn:hover {
@@ -243,7 +246,7 @@
 /* Contact Image */
 
 .contact__rightImage img {
-  width: 100%;
+  width: 460px;
   height: 100%;
   object-fit: contain;
 }
@@ -266,6 +269,41 @@
   padding: 0.6rem;
   display: flex;
   gap: 0.4rem;
+  width: 400px;
+}
+
+.input_container_name{
+  background: #ffffff;
+  border: 1px solid #0603e6;
+  border-radius: 12px;
+  padding: 0.6rem;
+  display: flex;
+  gap: 0.4rem;
+  width: 300px;
+}
+
+.input_container_name input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+}
+
+.input_container_mail{
+  background: #ffffff;
+  border: 1px solid #0603e6;
+  border-radius: 12px;
+  padding: 0.6rem;
+  display: flex;
+  gap: 0.4rem;
+  width: 300px;
+}
+
+.input_container_mail input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
 }
 
 .input_container input {
@@ -293,14 +331,14 @@
 .contact__form__button {
   border: none;
   background-color: #3029ff;
-  padding: 0.5rem;
   border-radius: 50px;
   color: white;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 1vw, 1rem);
   font-weight: bold;
   box-shadow: rgba(48, 41, 255, 0.5) 0px 5px 15px;
   border: 2px solid transparent;
   transition: 0.2s;
+  width: 100px;
 }
 
 .contact__form__button:hover {
