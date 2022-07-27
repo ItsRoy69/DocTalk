@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
-
-import logo from '../assets/images/logo.png';
-import '../styles/Navbar.css';
-
-
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import logo from "../assets/images/logo.png";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
-  const [showMenu,setShowMenu] = useState(false);
-
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <nav className="navbar">
@@ -21,56 +19,79 @@ const Navbar = () => {
       <div className="navbar__links">
         <ul>
           <li>
-            <a href="/" >Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/" >About Us</a>
+            <HashLink smooth to="/#about">
+              About Us
+            </HashLink>
           </li>
           <li>
-            <a href="/" >Donors</a>
+            <Link to="/plasmaDonor">Donors</Link>
           </li>
           <li>
-            <a href="/" >Donate</a>
+            <Link to="/donatePlasma">Donate</Link>
           </li>
           <li>
-            <a href="/" >Doctors</a>
+            <Link to="/doctors">Doctors</Link>
           </li>
           <li>
-            <a href="/" >Contact</a>
+            <HashLink smooth to="/#contact">
+              Contact
+            </HashLink>
           </li>
         </ul>
       </div>
-      <div className="navbar__hamburger-menu" onClick={() => setShowMenu(value => !value)}>
+      <div
+        className="navbar__hamburger-menu"
+        onClick={() => setShowMenu((value) => !value)}
+      >
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div className={`navbar__mobile-side-nav ${showMenu ? "navbar__mobile-side-nav--show":''}`}>
+      <div
+        className={`navbar__mobile-side-nav ${
+          showMenu ? "navbar__mobile-side-nav--show" : ""
+        }`}
+      >
         <ul>
-          <div className="navbar__mobile-side-nav__exit" onClick={() => setShowMenu(false)}>X</div>
+          <div
+            className="navbar__mobile-side-nav__exit"
+            onClick={() => setShowMenu(false)}
+          >
+            X
+          </div>
           <li>
-            <a href="/" >Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/" >About Us</a>
+            <HashLink smooth to="/#about" onClick={() => setShowMenu(false)}>
+              About Us
+            </HashLink>
           </li>
           <li>
-            <a href="/" >Donors</a>
+            <Link to="/plasmaDonor">Donors</Link>
           </li>
           <li>
-            <a href="/" >Donate</a>
+            <Link to="/donatePlasma">Donate</Link>
           </li>
           <li>
-            <a href="/" >Doctors</a>
+            <Link to="/doctors">Doctors</Link>
           </li>
           <li>
-            <a href="/" >Contact</a>
+            <HashLink smooth to="/#contact">
+              Contact
+            </HashLink>
           </li>
         </ul>
       </div>
-      <div className={`navbar__shadow ${showMenu ? "navbar__shadow--show":''}`} onClick={() => setShowMenu(false)}></div>
+      <div
+        className={`navbar__shadow ${showMenu ? "navbar__shadow--show" : ""}`}
+        onClick={() => setShowMenu(false)}
+      ></div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
