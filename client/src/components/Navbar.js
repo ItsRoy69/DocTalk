@@ -66,7 +66,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <HashLink smooth to="/#about" onClick={() => setShowMenu(false)}>
+            <HashLink smooth to="/#about">
               About Us
             </HashLink>
           </li>
