@@ -108,15 +108,17 @@
 
 .navbar__mobile-side-nav ul li {
   /* background-color: white; */
-  padding: 1rem;
+  /* padding: 1rem; */
   transition: 0.2s;
   cursor: pointer;
 }
 
 .navbar__mobile-side-nav ul li a {
   text-decoration: none;
+  padding: 1rem;
   color: white;
   display: block;
+
   /* background-color: green; */
 }
 
