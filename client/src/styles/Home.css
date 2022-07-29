@@ -72,6 +72,68 @@
 
 /* ----------------------------------------------------------------------------------- */
 
+/* ------------------------------- About Us Section ---------------------------------- */
+
+.aboutus { 
+  background-color: #3029ff;
+  padding: 30px 50px;
+  border-radius: 20px;
+}
+
+.aboutus h4 {
+  text-align: center;
+  color: white;
+  font-family: "Alatsi", sans-serif;
+  font-size: 48px;
+  margin-bottom: 2rem;
+}
+
+.aboutus .aboutus-container {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.aboutus-text { 
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Montserrat";
+  line-height: 35px;
+  text-align: justify;
+  color: white
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) { 
+  .aboutus h4 {
+    text-align: center;
+    color: white;
+    font-family: "Alatsi", sans-serif;
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  .aboutus-text { 
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Montserrat";
+    line-height: 30px;
+    text-align: justify;
+    color: white
+  }
+
+  .aboutus { 
+    background-color: #3029ff;
+    padding: 30px 35px;
+    border-radius: 20px;
+  }
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
 /* --------------------------Services----------------------------------------------------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
@@ -138,6 +200,9 @@
 }
 
 /* ----------------------------------------------------------------------------------- */
+
+/* ----------------------------Helping Hand------------------------------- */
+
 .helping-hand {
   margin-bottom: 2rem;
 }
