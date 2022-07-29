@@ -15,7 +15,14 @@ import helpingHand3 from "../assets/images/helpingHand3.png";
 import helpingHand4 from "../assets/images/helpingHand4.png";
 import helpingHand5 from "../assets/images/helpingHand5.png";
 import helpingHand6 from "../assets/images/helpingHand6.png";
-import { BsPersonSquare,BsEnvelopeFill,BsFillBookmarkFill,BsMessenger } from 'react-icons/bs';
+import {
+  BsPersonSquare,
+  BsEnvelopeFill,
+  BsFillBookmarkFill,
+  BsMessenger,
+} from "react-icons/bs";
+
+import { Link } from "react-router-dom";
 
 import "../styles/Home.css";
 
@@ -36,7 +43,19 @@ const Home = () => {
             <img src={headingPhoto} alt="heading" width="600" height="600" />
           </div>
         </div>
-        <div className="about">About</div>
+        <div className="aboutus" id="about">
+        <h4>About Us</h4>
+        <div className="aboutus-container"> 
+          <p className="aboutus-text"> 
+          DocTalk is your ultimate medical help space. Here, at DocTalk you will be helped with all the 
+          services catering towards the medical field like Plasma donors' hospital beds oxygen suppliers 
+          medicine suppliers and ambulance providers. DocTalk is your one step solution. Just log into 
+          your account and book your appointment right away. you can even call us for your appointment, 
+          and we will get back to you shortly.
+          </p>
+        </div>
+
+        </div>
         <div className="services">
           <h4>Services</h4>
           <div className="services-container">
@@ -48,7 +67,9 @@ const Home = () => {
                 Plasma Donor
               </h3>
               <div className="overlay"></div>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/plasmadonor"}>
+                View
+              </Link>
             </div>
             <div
               className="service-box"
@@ -58,7 +79,9 @@ const Home = () => {
                 Hospital Beds
               </h3>
               <div className="overlay"></div>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/hospitalbed"}>
+                View
+              </Link>
             </div>
             <div
               className="service-box"
@@ -68,7 +91,9 @@ const Home = () => {
                 Oxygen Supplier
               </h3>
               <div className="overlay"></div>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/osupplier"}>
+                View
+              </Link>
             </div>
             <div
               className="service-box"
@@ -78,7 +103,9 @@ const Home = () => {
                 Ambulances
               </h3>
               <div className="overlay"></div>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/ambulances"}>
+                View
+              </Link>
             </div>
             <div
               className="service-box"
@@ -88,7 +115,9 @@ const Home = () => {
                 Medicines
               </h3>
               <div className="overlay"></div>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/medicines"}>
+                View
+              </Link>
             </div>
             <div
               className="service-box"
@@ -98,7 +127,9 @@ const Home = () => {
                 Doctors
               </h3>
               <div className="overlay"></div>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/doctors"}>
+                View
+              </Link>
             </div>
           </div>
         </div>
@@ -116,7 +147,9 @@ const Home = () => {
                 To make matters a bit better for everyone list an ambulance
                 provider down below.
               </p>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/regambulances"}>
+                Contact
+              </Link>
             </div>
             <div className="helping-box">
               <div className="image-container">
@@ -128,7 +161,9 @@ const Home = () => {
                 shortage of oxygen supply. To put an end to it we request you to
                 click the button below to list an oxygen supplier you know of.
               </p>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/regoxygensuppliers"}>
+                Contact
+              </Link>
             </div>
             <div className="helping-box">
               <div className="image-container">
@@ -143,7 +178,9 @@ const Home = () => {
                 know who is willing to donate plasma onto our list of plasma
                 donors.
               </p>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/donateplasma"}>
+                Contact
+              </Link>
             </div>
             <div className="helping-box">
               <div className="image-container">
@@ -157,7 +194,9 @@ const Home = () => {
                 so that the ones in need can get their medicines supplied to
                 them.
               </p>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/regmedicines"}>
+                Contact
+              </Link>
             </div>
             <div className="helping-box">
               <div className="image-container">
@@ -169,7 +208,9 @@ const Home = () => {
                 if you are licensed. You can help millions of people through
                 consultation by registering under this website.
               </p>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/doctorsregistration"}>
+                Contact
+              </Link>
             </div>
             <div className="helping-box">
               <div className="image-container">
@@ -182,24 +223,26 @@ const Home = () => {
                 below to add yourself or someone you know who is willing to
                 donate plasma onto our list of plasma donors.
               </p>
-              <button className="view-btn">View</button>
+              <Link className="view-btn" to={"/reghospitalbed"}>
+                Contact
+              </Link>
             </div>
           </div>
         </div>
-        <div className="contact">
+        <div className="contact" id="contact">
           <div className="contact__heading">Contact Us</div>
           <div className="contact__main">
             <div className="contact__form">
-              <div className="input_container">
-                <BsPersonSquare size={40} color="#0603E6"/>
+              <div className="input_container_name">
+                <BsPersonSquare size={40} color="#0603E6" />
                 <input
                   type="text"
                   className="contact__form__name"
                   placeholder="Name"
                 />
               </div>
-              <div className="input_container">
-                <BsEnvelopeFill size={40} color="#0603E6"/>
+              <div className="input_container_mail">
+                <BsEnvelopeFill size={40} color="#0603E6" />
                 <input
                   type="text"
                   className="contact__form__email"
@@ -208,7 +251,7 @@ const Home = () => {
               </div>
 
               <div className="input_container">
-                <BsFillBookmarkFill size={40} color="#0603E6"/>
+                <BsFillBookmarkFill size={40} color="#0603E6" />
                 <input
                   type="text"
                   className="contact__form__subject"
@@ -216,7 +259,7 @@ const Home = () => {
                 />
               </div>
               <div className="input_container">
-                <BsMessenger size={40} color="#0603E6"/>
+                <BsMessenger size={40} color="#0603E6" />
                 <textarea
                   className="contact__form__message"
                   placeholder="Message"
