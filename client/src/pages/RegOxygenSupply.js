@@ -56,4 +56,4 @@ const RegOxygenSupply = () => {
   )
 }
 
-export default RegOxygenSupply
+export default RegOxygenSupply;
