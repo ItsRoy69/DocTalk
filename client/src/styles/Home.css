@@ -609,7 +609,7 @@
   
   .contact__rightImage {
     position: relative;
-    top: 5vw;
+    bottom: 20vh;
     width: 50vw;
     height: 60vh;
     object-fit: cover;
