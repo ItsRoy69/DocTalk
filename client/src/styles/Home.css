@@ -4,6 +4,7 @@
 .container {
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* ----------------------------------------------------------------------------------- */
@@ -31,7 +32,7 @@
   font-weight: bold;
 }
 
-.heading__info__cta {  
+.heading__info__cta { 
   border: none;
   background-color: #3029ff;  
   border-radius: 30px;
@@ -58,18 +59,6 @@
   max-height: 400px;
   object-fit: contain;
   filter: drop-shadow(5px 5px 5px #3029ff);
-}
-
-@media (min-width: 750px) {
-  .heading {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .heading__info__cta {
-    max-width: 15rem;
-    margin-top: 5rem;
-  }
 }
 
 /* ----------------------------------------------------------------------------------- */
@@ -106,7 +95,7 @@
   color: white
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) { 
   .aboutus h4 {
     text-align: center;
@@ -130,7 +119,7 @@
     padding: 30px 35px;
     border-radius: 20px;
   }
-}
+} */
 
 
 
@@ -418,18 +407,227 @@
 
 /* Media Queries */
 
-@media (min-width: 750px) {
-  .contact__main {
-    flex-direction: row;
+@media only screen and (max-width: 600px){
+  .container{
+    max-width: 100vw;
+    overflow: hidden;
   }
 
-  .contact__form__button {
-    max-width: 15rem;
+  .heading__info__title{
+    position: relative;
+    top: 2.5vh;
+    font-size: 3rem;
   }
 
-  .contact__form__email,
-  .contact__form__name {
-    max-width: 80%;
+  .heading__info__subtitle{
+    position: relative;
+    top: 2.5vh;
+  }
+
+  .heading__info__cta{
+    position: relative;
+    top: 5vh;
+  }
+
+  .aboutus{
+    position: relative;
+    top: 5vh;
+  }
+
+  .services{
+    position: relative;
+    top: 7.5vh;
+  }
+
+  .helping-hand{
+    position: relative;
+    top: 7.5vh;
+  }
+
+  .contact{
+    position: relative;
+    top: 2.5vh;
+  }
+
+  .contact__rightImage{
+    position: relative;
+    bottom: 2.5vh;
+    max-width: 100vw;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .input_container_name, .input_container, .input_container_mail{
+    max-width: 100%;
+  }
+
+  .contact__form__email,.contact__form__subject,.contact__form__message{
+    width: 100%; 
+  }
+
+  .contact__form{
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .contact__form__button{
+    margin-top: 2.5vw;
+    margin-bottom: 7.5vw;
+    width: 35vw;
+    height:12.5vw;
   }
 }
 
+@media only screen and (min-width:768px){
+  .container{
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .heading__info__title{
+    position: relative;
+    top: 2.5vh;
+    font-size: 3rem;
+  }
+
+  .heading__info__subtitle{
+    position: relative;
+    top: 2.5vh;
+  }
+
+  .heading__info__cta{
+    position: relative;
+    top: 5vh;
+  }
+
+  .aboutus{
+    position: relative;
+    top: 5vh;
+  }
+
+  .services{
+    position: relative;
+    top: 7.5vh;
+  }
+
+  .helping-hand{
+    position: relative;
+    top: 7.5vh;
+  }
+
+  .contact{
+    position: relative;
+    top: 5vh;
+  }
+
+  .contact__rightImage{
+    position: relative;
+    max-width: 100vw;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .input_container_name, .input_container, .input_container_mail{
+    max-width: 100%;
+  }
+
+  .contact__form__email,.contact__form__subject,.contact__form__message{
+    width: 100%; 
+  }
+
+  .contact__main{
+    display: flex;
+    align-items: center;
+  }
+
+  .contact__form{
+    position: relative;
+    top: 2.5vw;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .contact__form__button{
+    margin-top: 2.5vw;
+    margin-bottom: 12.5vw;
+    min-width: 25vw;
+    height:7.5vw;
+  }
+}
+
+@media only screen and (min-width:992px){
+  .container{
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .heading__info__title{
+    position: relative;
+    top: 2.5vh;
+    font-size: 3rem;
+  }
+
+  .heading__info__subtitle{
+    position: relative;
+    top: 2.5vh;
+  }
+
+  .heading__info__cta{
+    position: relative;
+    top: 5vh;
+  }
+
+  .aboutus{
+    position: relative;
+    top: 5vh;
+  }
+
+  .services{
+    position: relative;
+    top: 7.5vh;
+  }
+
+  .helping-hand{
+    position: relative;
+    top: 7.5vh;
+  }
+
+  .contact__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .contact__rightImage {
+    position: relative;
+    bottom: 20vh;
+    width: 50vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+  
+  .contact__form {
+    position: relative;
+    left: 2.5vw;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-family: "Montserrat";
+  }
+  
+  .contact__form__button{
+    margin-top: 2.5vw;
+    margin-bottom: 12.5vw;
+    min-width: 15vw;
+    height:5vw;
+  }
+}
