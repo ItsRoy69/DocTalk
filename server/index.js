@@ -9,13 +9,12 @@ const MedsRoutes = require("./routes/Meds");
 const OxygenRoutes = require("./routes/Oxygen");
 const AmbulanceRoutes = require("./routes/Ambulance");
 const {UserRoutes}=require('./routes/user');
+const DoctorSignup = require("./routes/DoctorSignup");
 var cors = require("cors");
 
 const PORT = 5000;
 
-const dotenv = require("dotenv");
-dotenv.config();
-
+require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 
@@ -24,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGO_URL_CONNECTION)
+  .connect(process.env.DATABASE)
   .then(() => {
     console.log("mongodb is connected");
   })
@@ -52,6 +51,7 @@ app.use("/api", MedsRoutes);
 app.use("/api", OxygenRoutes);
 app.use("/api", AmbulanceRoutes);
 app.use("/api/user",UserRoutes);
+app.use(DoctorSignup);
 
 app.listen(PORT, () => {
   console.log("server is listening at port 5000");
