@@ -14,10 +14,7 @@ var cors = require("cors");
 
 const PORT = 5000;
 
-const dotenv = require("dotenv");
-//env file configuration
-dotenv.config({ path: "./config.env" });
-
+require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 
