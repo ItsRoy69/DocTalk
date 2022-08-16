@@ -15,6 +15,7 @@ import RegMedicine from "./pages/RegMedicine.js";
 import PatientsRegistration from "./pages/PatientsRegistration.js";
 import DoctosRegistration from "./pages/DoctosRegistration.js";
 import ScrollToTop from "./components/ScrollToTop.js";
+import Signup from "./pages/Signup";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route exact path="/medicines" element={<Medicines />} />
           <Route exact path="/donateplasma" element={<DonatePlasma />} />
           <Route exact path="/reghospitalbed" element={<RegHospitalBed />} />
+          <Route exact path="/doctor-signup" element={<Signup />} />
           <Route
             exact
             path="/regoxygensuppliers"

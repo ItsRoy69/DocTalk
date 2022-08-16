@@ -56,7 +56,7 @@ const Footer = () => {
             <Link to="/">Medicine Supply </Link>
           </p>
           <p>
-            <Link to="/">Register as Doctor </Link>
+            <Link to="/doctorsregistration">Register as Doctor </Link>
           </p>
         </div>
         <div className="footer-section">
