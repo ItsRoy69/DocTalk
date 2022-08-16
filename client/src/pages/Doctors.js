@@ -1,6 +1,6 @@
 import "antd/dist/antd.css";
 import { Select } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import doctorsDetailsArr from "../components/DoctorsDetailsArr";
 import "../styles/Doctors.css";
 import Navbar from "../components/Navbar";
