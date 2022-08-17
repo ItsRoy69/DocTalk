@@ -32,7 +32,7 @@
   font-weight: bold;
 }
 
-.heading__info__cta { 
+.heading__info__cta {  
   border: none;
   background-color: #3029ff;  
   border-radius: 30px;
@@ -40,17 +40,15 @@
   font-size: clamp(1rem, 1vw, 1rem);
   font-weight: bold;
   width: 150px;
-  padding:10px;
   box-shadow: rgba(48, 41, 255, 0.5) 0px 5px 15px;
   border: 2px solid transparent;
-  transition:120ms;
+  transition: 0.5s;
 }
 
 .heading__info__cta:hover {
   background-color: transparent;
   border: 2px solid #3029ff;
   color: #3029ff;
-  transform:scale(0.95);
 }
 
 .heading__lcp img {
