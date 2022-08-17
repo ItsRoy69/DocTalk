@@ -4,7 +4,7 @@ import Home from "./pages/Home.js";
 import PlasmaDonor from "./pages/PlasmaDonor.js";
 import HospitalBed from "./pages/HospitalBed.js";
 import OxygenSupplier from "./pages/OxygenSupplier.js";
-import Ambulances from "./pages/Ambulances.js";
+import Ambulances from "./pages/Ambulances.jsx";
 import Doctors from "./pages/Doctors.js";
 import Medicines from "./pages/Medicines.js";
 import DonatePlasma from "./pages/DonatePlasma.js";
