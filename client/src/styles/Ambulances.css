@@ -1,0 +1,164 @@
+.banner {
+	display: flex;
+	justify-content: center;
+}
+
+.banner img {
+	width: 100%;
+	height: 100%;
+	max-width: 700px;
+	object-fit: contain;
+	filter: none;
+}
+
+.container-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+	padding: 0;
+}
+
+.heading {
+	font-family: "Alatsi";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	color: #3029ff;
+	line-height: 61px;
+}
+
+.searchbar {
+	background: #ffffff;
+	border: 1px solid #0603e6;
+	border-radius: 12px;
+	padding: 0.6rem;
+	display: flex;
+	gap: 0.4rem;
+	width: 500px;
+	align-items: center;
+	height: 70px;
+}
+
+.searchbar input {
+	width: 100%;
+	height: 40px;
+	border: none;
+	outline: none;
+}
+
+.ambulance {
+	position: relative;
+	margin: 0 5px 0 5px;
+}
+
+.ambulance-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #3832f3;
+	box-shadow: inset -100px 0px 80px 20px rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	width: 100%;
+	padding: 10px 20px 20px 20px;
+	align-items: center;
+	margin: 0.5rem 0;
+}
+.info {
+	display: flex;
+	flex-direction: column;
+}
+
+.ambulance-container .details {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.name {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 900;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+.ambulance-container .details h5 {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 900;
+	color: #ffffff;
+}
+
+.info div {
+	display: flex;
+	width: 100%;
+}
+
+.ambulance-container .details svg {
+	padding-right: 5px;
+	color: white;
+
+	min-height: 20px;
+	min-width: 20px;
+}
+.ambulance {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+.ambulance-container img {
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.address h5 {
+	padding-right: 5px;
+}
+
+@media screen and (max-width: 548px) {
+	.container {
+		flex-direction: column;
+	}
+	.container-heading {
+		flex-direction: column;
+		padding: 0 10px 0 10px;
+	}
+	.heading {
+		font-size: 27px;
+		text-align: center;
+		width: 100%;
+		line-height: 30px;
+	}
+	.searchbar {
+		width: 100%;
+		margin: 5px;
+	}
+	.ambulance-container {
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		position: relative;
+	}
+	.ambulance-container img {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 95%;
+	}
+	.ambulance-container .details {
+		padding: 10px;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.info {
+		flex-direction: column;
+	}
+	.name {
+		margin-top: 210px;
+	}
+}

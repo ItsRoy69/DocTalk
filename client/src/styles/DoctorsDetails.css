@@ -9,6 +9,7 @@ padding: 1.4rem 4rem;
 align-items: center;
 margin: 1.4rem 0;
 }
+
 .doctors-details .details h5 {
   font-family: "Montserrat";
   font-style: normal;
@@ -16,6 +17,7 @@ margin: 1.4rem 0;
   font-size: 18px;
   color: #ffffff;
 }
+
 @media screen and (max-width: 548px) {
     .doctors-details {
         flex-direction: column-reverse;

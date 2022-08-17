@@ -50,7 +50,7 @@ const Footer = () => {
             <Link to="/">Donate your Plasma </Link>
           </p>
           <p>
-            <Link to="/">Ambulances </Link>
+            <Link to="/ambulances">Ambulances </Link>
           </p>
           <p>
             <Link to="/">Medicine Supply </Link>
