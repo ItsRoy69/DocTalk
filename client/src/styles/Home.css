@@ -4,7 +4,6 @@
 .container {
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 /* ----------------------------------------------------------------------------------- */
@@ -59,6 +58,18 @@
   filter: drop-shadow(5px 5px 5px #3029ff);
 }
 
+@media (min-width: 750px) {
+  .heading {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .heading__info__cta {
+    max-width: 15rem;
+    margin-top: 5rem;
+  }
+}
+
 /* ----------------------------------------------------------------------------------- */
 
 /* ------------------------------- About Us Section ---------------------------------- */
@@ -93,7 +104,7 @@
   color: white
 }
 
-/* Extra small devices (phones, 600px and down)
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) { 
   .aboutus h4 {
     text-align: center;
@@ -117,7 +128,7 @@
     padding: 30px 35px;
     border-radius: 20px;
   }
-} */
+}
 
 
 
@@ -159,25 +170,23 @@
 .services .services-container .service-box .view-btn {
   width: 138px;
   height: 46px;
-  /* background: #3029ff; */
-  background: linear-gradient(30deg,#817de6,#3029ff,#221e9e);
-  box-shadow: 0px 0px 8px #ffffff;
+  background: #3029ff;
+  box-shadow: 0px 4px 10px #ffffff;
   border-radius: 20px;
   color: #ffffff;
   z-index: 2;
+  transition: 0.2s;
   border: none;
   text-align: center;
   padding: 0.7rem;
 }
 
 .services .services-container .service-box .view-btn:hover {
-  box-shadow: 0px 0px 10px #ffffff;
-  transform:scale(0.95);
-  background:linear-gradient(40deg,#90d0f5,#ecedee);
-  animation:shine 200ms ;
-  filter:drop-shadow(0 0 2px #3029ff );
+  background: transparent;
+  border: 1px solid #3029ff;
+  box-shadow: 0px 4px 10px #3029ff;
+  background: #ffffff;
   color: #3029ff;
-  font-weight: 600;
 }
 
 .services .services-container .service-box .overlay {
@@ -255,8 +264,8 @@
 
 .helping-hand .helping-container .helping-box .view-btn {
   width: 124px;
-  height: 35px;
-  background: #0603e6;
+  height: 33px;
+  background: #3029ff;
   border-radius: 20px;
   color: #ffffff;
   z-index: 2;
@@ -268,13 +277,13 @@
   transform: translateX(-50%);
   border: none;
   text-align: center;
-  padding: 0.3rem;
+  padding: 0.2rem;
 }
 
 .helping-hand .helping-container .helping-box .view-btn:hover {
-  box-shadow: 0px 0px 6px #3029ff;
-  border:1px solid #3029ff;
-  filter:drop-shadow(0 0 2px #ffffff );
+  background: transparent;
+  border: 1px solid #3029ff;
+  box-shadow: 0px 4px 10px #3029ff;
   background: #ffffff;
   color: #3029ff;
 }
@@ -405,227 +414,17 @@
 
 /* Media Queries */
 
-@media only screen and (max-width: 600px){
-  .container{
-    max-width: 100vw;
-    overflow: hidden;
-  }
-
-  .heading__info__title{
-    position: relative;
-    top: 2.5vh;
-    font-size: 3rem;
-  }
-
-  .heading__info__subtitle{
-    position: relative;
-    top: 2.5vh;
-  }
-
-  .heading__info__cta{
-    position: relative;
-    top: 5vh;
-  }
-
-  .aboutus{
-    position: relative;
-    top: 5vh;
-  }
-
-  .services{
-    position: relative;
-    top: 7.5vh;
-  }
-
-  .helping-hand{
-    position: relative;
-    top: 7.5vh;
-  }
-
-  .contact{
-    position: relative;
-    top: 2.5vh;
-  }
-
-  .contact__rightImage{
-    position: relative;
-    bottom: 2.5vh;
-    max-width: 100vw;
-    height: 35vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .input_container_name, .input_container, .input_container_mail{
-    max-width: 100%;
-  }
-
-  .contact__form__email,.contact__form__subject,.contact__form__message{
-    width: 100%; 
-  }
-
-  .contact__form{
-    max-width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-  }
-
-  .contact__form__button{
-    margin-top: 2.5vw;
-    margin-bottom: 7.5vw;
-    width: 35vw;
-    height:12.5vw;
-  }
-}
-
-@media only screen and (min-width:768px){
-  .container{
-    max-width: 100vw;
-    overflow: hidden;
-  }
-
-  .heading__info__title{
-    position: relative;
-    top: 2.5vh;
-    font-size: 3rem;
-  }
-
-  .heading__info__subtitle{
-    position: relative;
-    top: 2.5vh;
-  }
-
-  .heading__info__cta{
-    position: relative;
-    top: 5vh;
-  }
-
-  .aboutus{
-    position: relative;
-    top: 5vh;
-  }
-
-  .services{
-    position: relative;
-    top: 7.5vh;
-  }
-
-  .helping-hand{
-    position: relative;
-    top: 7.5vh;
-  }
-
-  .contact{
-    position: relative;
-    top: 5vh;
-  }
-
-  .contact__rightImage{
-    position: relative;
-    max-width: 100vw;
-    height: 35vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .input_container_name, .input_container, .input_container_mail{
-    max-width: 100%;
-  }
-
-  .contact__form__email,.contact__form__subject,.contact__form__message{
-    width: 100%; 
-  }
-
-  .contact__main{
-    display: flex;
-    align-items: center;
-  }
-
-  .contact__form{
-    position: relative;
-    top: 2.5vw;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .contact__form__button{
-    margin-top: 2.5vw;
-    margin-bottom: 12.5vw;
-    min-width: 25vw;
-    height:7.5vw;
-  }
-}
-
-@media only screen and (min-width:992px){
-  .container{
-    max-width: 100vw;
-    overflow: hidden;
-  }
-
-  .heading__info__title{
-    position: relative;
-    top: 2.5vh;
-    font-size: 3rem;
-  }
-
-  .heading__info__subtitle{
-    position: relative;
-    top: 2.5vh;
-  }
-
-  .heading__info__cta{
-    position: relative;
-    top: 5vh;
-  }
-
-  .aboutus{
-    position: relative;
-    top: 5vh;
-  }
-
-  .services{
-    position: relative;
-    top: 7.5vh;
-  }
-
-  .helping-hand{
-    position: relative;
-    top: 7.5vh;
-  }
-
+@media (min-width: 750px) {
   .contact__main {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
   }
-  
-  .contact__rightImage {
-    position: relative;
-    bottom: 20vh;
-    width: 50vw;
-    height: 60vh;
-    object-fit: cover;
+
+  .contact__form__button {
+    max-width: 15rem;
   }
-  
-  .contact__form {
-    position: relative;
-    left: 2.5vw;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    font-family: "Montserrat";
-  }
-  
-  .contact__form__button{
-    margin-top: 2.5vw;
-    margin-bottom: 12.5vw;
-    min-width: 15vw;
-    height:5vw;
+
+  .contact__form__email,
+  .contact__form__name {
+    max-width: 80%;
   }
 }
