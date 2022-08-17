@@ -36,6 +36,9 @@ const Navbar = () => {
             <Link to="/doctors">Doctors</Link>
           </li>
           <li>
+            <Link to="/doctor-signup">Signup</Link>
+          </li>
+          <li>
             <HashLink smooth to="/#contact">
               Contact
             </HashLink>
