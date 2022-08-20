@@ -7,7 +7,6 @@
 <br/>
 
 - This website will be fully built in MERN Stack i.e MongoDB, ExpressJS, ReactJS, NodeJS.
-- For understanding of UI/UX check [here](https://www.figma.com/file/6qxdJMmXpIlXS3sWEAvVt8/Untitled?node-id=0%3A1)
 - Issues will be assigned on a First-Come-First-Serve basis and are applicable only when they are opted through GitHub.
 - Each issue needs to be completed within a specific time limit according to its difficulty level ( **`Easy`: 1 day, `Medium`: 2-3 days and `Hard`: 4 days )**.
 - If a mentee is unable to solve the allotted issue within the given period, the issue needs to be passed to other contenders on the discretion of the mentor.
