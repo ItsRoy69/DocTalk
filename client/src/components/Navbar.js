@@ -10,12 +10,14 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+			<Link to="/" style={{ color: "inherit" }}>
       <div className="navbar__slogan">
         <div className="navbar__slogan__logo">
           <img src={logo} alt="logo" />
         </div>
         <div className="navbar__slogan__name">DocTalk</div>
       </div>
+			</Link>
       <div className="navbar__links">
         <ul>
           <li>
@@ -94,7 +96,7 @@ const Navbar = () => {
         onClick={() => setShowMenu(false)}
       ></div>
     </nav>
-  );
-};
+	)
+}
 
-export default Navbar;
+export default Navbar

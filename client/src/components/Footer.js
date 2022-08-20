@@ -10,9 +10,11 @@ const Footer = () => {
     <>
       <div className="footer-container">
         <div className="logo-title-container">
+					<Link to="/">
           <div className="footer-logo">
             <img src={logo} alt="logo" />
           </div>
+					</Link>
           <h3 style={{ fontSize: "25px", fontWeight: "700" }}>DocTalk</h3>
           <p>MedHelp Just A Click Away !</p>
         </div>
