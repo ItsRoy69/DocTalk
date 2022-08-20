@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home.js";
+import Home from "./pages/Home.jsx";
 import PlasmaDonor from "./pages/PlasmaDonor.js";
 import HospitalBed from "./pages/HospitalBed.js";
 import OxygenSupplier from "./pages/OxygenSupplier.js";
