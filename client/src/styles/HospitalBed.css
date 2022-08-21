@@ -1,0 +1,61 @@
+.hospital-beds-details {
+    position: relative;
+    max-width: 100%;
+    padding-bottom: 30px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    padding-left: 100px;
+}
+
+.hospital-beds-title {
+    opacity: 0;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1c87c9;
+    background-color: rgba(200, 200, 200, 0.5);
+    width: 600px;
+    height: 600px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+}
+
+.hospital-beds-details .hospital-beds-title:hover {
+    opacity: 1;
+}
+
+.hospital-beds-details .hospital-beds-title .hospital-beds-title-name {
+    height: 0;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+.hospital-beds-details .hospital-beds-title:hover .hospital-beds-title-name {
+    opacity: 1;
+    transform: translateY(250px);
+    -webkit-transform: translateY(250px);
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.responsive-image {
+    height: auto;
+    width: 100%;
+}
