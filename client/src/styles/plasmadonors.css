@@ -155,4 +155,26 @@ width: 30%;
 margin-left: 10px;
 }
 
-/*  for the heading tag #3029ff */
+@media screen and (max-width:767px){
+    .search-field{
+        width: 50%;
+    }
+    .design{
+        font-size: 30px;
+    }
+
+}
+@media screen and (max-width:480px){
+    .search-field{
+        width: 70%;
+    }
+    .design{
+        font-size: 25px;
+    }
+    .search-field-button{
+    display: none;
+    }
+    .search>input{
+  border-radius: 10px;
+    }
+}

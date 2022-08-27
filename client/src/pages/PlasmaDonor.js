@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import donors from '../data/plasmadonors'
+import React,{useState} from "react";
 import "../styles/plasmadonors.css";
+import donors from "../data/plasmadonors";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AOS from 'aos';

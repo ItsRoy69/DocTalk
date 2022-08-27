@@ -28,7 +28,7 @@ This might be the debut repo for you , you can contribute to this repo , solve t
 - **Take a look at the [Contributing Guidelines](CONTRIBUTING.md) for proper contributions**
 - **Take a look at the [Setup Guidelines](rules/Setup.md) to setup the react app locally**
 
----
+---fq2w
 
 ## Technologies used 💻
 
@@ -56,3 +56,4 @@ This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
 
 ---
 ## Happy Contributions !!
+c
