@@ -7,6 +7,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.21.3",
+    "aos": "^2.3.4",
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "react": "^17.0.2",

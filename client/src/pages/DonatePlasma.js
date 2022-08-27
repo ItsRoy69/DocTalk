@@ -8,6 +8,7 @@ import { BsPersonSquare,BsTelephoneFill,BsGlobe,BsBuilding,BsFillHouseFill,BsDro
 
 function DonatePlasma() {
   return (
+    
     <>
         <Navbar/>
         <div className='donate-plasma'>
