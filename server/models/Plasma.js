@@ -2,34 +2,34 @@ const mongoose = require("mongoose");
 
 const Plasma = new mongoose.Schema(
   {
-    Name: {
-      required: false,
+    name: {
+      required: true,
       type: String,
       max: 32,
     },
-    Phone_no: {
+    phone: {
+      required: true,
+      type: String,
+    },
+    bloodGroup: {
+      required: true,
+      type: String,
+    },
+    cDate: {
+      required: true,
+      type: String,
+    },
+    address: {
       required: false,
       type: String,
     },
-    Blood_group: {
-      required: false,
-      type: String,
-    },
-    C_Date: {
-      required: false,
-      type: String,
-    },
-    Address: {
-      required: false,
-      type: String,
-    },
-    City: {
-      required: false,
+    city: {
+      required: true,
       type: String,
       max: 32,
     },
-    Pincode: {
-      required: false,
+    pincode: {
+      required: true,
       type: String,
     },
   },
