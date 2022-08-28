@@ -1,13 +1,12 @@
-
-const { User } = require("../models/User");
+const { Patient } = require("../models/Patient");
 const router = require("express").Router();
 const { hashPassword,comparePassword } = require("../utils/bcrypt");
-//registering a user
+//registering a patient
 
 router.post("/register", async (req, res) => {
 
-    const { firstName, lastName, email, password, exactLocation } = req.body;
-    if (!firstName || !lastName || !email || !password || !exactLocation) {
+    const { firstName, lastName, email, password, illness, exactLocation } = req.body.formData;
+    if (!firstName || !lastName || !email || !password || !illness || !exactLocation) {
         return res.status(401).json({
             success: false,
             message: "all fields are required!"
@@ -15,29 +14,30 @@ router.post("/register", async (req, res) => {
     }
     //checking if email is taken
 
-    const existingUser = await User.findOne({ email: email });
+    const existingPatient = await Patient.findOne({ email: email });
 
-    if (existingUser) {
-       return res.status(400).json({
+    if (existingPatient) {
+        return res.status(400).json({
             success: false,
             message: "email already exists!"
         })
     }
     //checking if email is taken
 
-    const user = new User({
+    const patient = new Patient({
         firstName: firstName,
         lastName: lastName,
         email: email,
         password: hashPassword(password),
+        illness: illness,
         exactLocation: exactLocation
-    })
+    });
 
-    user.save().then((user) => {
+    patient.save().then((patient) => {
         res.status(201).json({
             success: true,
-            message: "user saved successfully!",
-            user: user
+            message: "patient saved successfully!",
+            patient: patient
         })
     }).catch(err => {
         res.status(500).json({
@@ -47,26 +47,26 @@ router.post("/register", async (req, res) => {
     })
 
 })
-//registering a user
+//registering a patient
 
-//user login
+//patient login
 
 router.post("/login",async(req,res)=>{
-    const {email,password}=req.body;
+    const {email,password} = req.body;
     if(!email||!password){
         return res.status(401).json({
             success:false,
             message:"all fields are required!"
         })
     }
-    const user=await User.findOne({email:email});
-    if(!user){
+    const patient =await Patient.findOne({email:email});
+    if(!patient){
         return res.status(401).json({
             success:false,
             message:"incorrect username or password!"
         })
     }
-    const isMatch=comparePassword(password,user.password);
+    const isMatch=comparePassword(password,patient.password);
     if(!isMatch){
         return res.status(401).json({
             success:false,
@@ -75,12 +75,12 @@ router.post("/login",async(req,res)=>{
     }
     res.status(200).json({
         success:true,
-        message:"user logged in successfully!",
-        user:user
+        message:"patient logged in successfully!",
+        patient:patient
     })
 
 })
 
-//user login
+//patient login
 
-module.exports.UserRoutes = router;
+module.exports = router;
