@@ -50,7 +50,7 @@ app.use(HospitalRoutes);
 app.use(MedsRoutes);
 app.use(OxygenRoutes);
 app.use(AmbulanceRoutes);
-app.use(UserRoutes);
+app.use(PatientRoutes);
 app.use(DoctorSignup);
 
 app.listen(PORT, () => {
