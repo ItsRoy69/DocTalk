@@ -8,7 +8,7 @@ const HospitalRoutes = require("./routes/Hospital");
 const MedsRoutes = require("./routes/Meds");
 const OxygenRoutes = require("./routes/Oxygen");
 const AmbulanceRoutes = require("./routes/Ambulance");
-const {UserRoutes}=require('./routes/user');
+const PatientRoutes = require('./routes/Patient');
 const DoctorSignup = require("./routes/DoctorSignup");
 var cors = require("cors");
 
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.DATABASE)
+  .connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("mongodb is connected");
   })
@@ -45,12 +45,12 @@ app.get("/", (req, res) => {
   res.send("HELLO THERE");
 });
 
-app.use("/api", PlasmaRoutes);
-app.use("/api", HospitalRoutes);
-app.use("/api", MedsRoutes);
-app.use("/api", OxygenRoutes);
-app.use("/api", AmbulanceRoutes);
-app.use("/api/user",UserRoutes);
+app.use(PlasmaRoutes);
+app.use(HospitalRoutes);
+app.use(MedsRoutes);
+app.use(OxygenRoutes);
+app.use(AmbulanceRoutes);
+app.use(UserRoutes);
 app.use(DoctorSignup);
 
 app.listen(PORT, () => {
