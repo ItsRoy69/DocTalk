@@ -32,24 +32,12 @@ const App = () => {
           <Route exact path="/medicines" element={<Medicines />} />
           <Route exact path="/donateplasma" element={<DonatePlasma />} />
           <Route exact path="/reghospitalbed" element={<RegHospitalBed />} />
-          <Route exact path="/doctor-signup" element={<Signup />} />
-          <Route
-            exact
-            path="/regoxygensuppliers"
-            element={<RegOxygenSupply />}
-          />
+          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/regoxygensuppliers" element={<RegOxygenSupply />}/>
           <Route exact path="/regambulances" element={<RegAmbulance />} />
           <Route exact path="/regmedicines" element={<RegMedicine />} />
-          <Route
-            exact
-            path="/patientsregistration"
-            element={<PatientsRegistration />}
-          />
-          <Route
-            exact
-            path="/doctorsregistration"
-            element={<DoctosRegistration />}
-          />
+          <Route exact path="/patientsregistration" element={<PatientsRegistration />}/>
+          <Route exact path="/doctorsregistration" element={<DoctosRegistration />}/>
         </Routes>
       </Router>
     </div>
