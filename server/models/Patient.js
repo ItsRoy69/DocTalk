@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const User =new mongoose.Schema({
+const Patient =new mongoose.Schema({
     firstName: {
         type: String,
         required: true,
@@ -26,6 +26,12 @@ const User =new mongoose.Schema({
         min: 3,
         max: 30
     },
+    illness:{
+        type: String,
+        required: true,
+        min: 3,
+        max: 50
+    },
     exactLocation: {
         type: String,
         required: true,
@@ -35,4 +41,4 @@ const User =new mongoose.Schema({
 
 } );
 
-module.exports.User = mongoose.model('User', User);
+module.exports.Patient = mongoose.model('Patient', Patient);
