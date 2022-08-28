@@ -15,7 +15,7 @@ router.get("/all-doctors", async (req, res) => {
 
 router.post("/doctor-signup", async (req, res) => {
   try {
-    const { name, country, phone, city, hospital_name, speciality } = req.body;
+    const { name, country, phone, city, hospital_name, speciality } = req.body.formData;
     const doctordata = Doctor_Signup({
       name: name,
       country: country,
@@ -24,12 +24,12 @@ router.post("/doctor-signup", async (req, res) => {
       hospital_name: hospital_name,
       speciality: speciality,
     });
-   const registered = await doctordata.save();
-   console.log(registered);
-   if(registered){
+  const registered = await doctordata.save();
+  console.log(registered);
+  if(registered){
     res.status(201).json({ message: "doctor successfully add!" });
-   }
-    res.status(200).json(Doctor_Signup);
+  }
+  res.status(200).json(Doctor_Signup);
   } catch (e) {
     console.log(`Error in creating a doctor: ${e}`);
   }
