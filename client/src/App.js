@@ -13,7 +13,7 @@ import RegOxygenSupply from "./pages/RegOxygenSupply.js";
 import RegAmbulance from "./pages/RegAmbulance.js";
 import RegMedicine from "./pages/RegMedicine.js";
 import PatientsRegistration from "./pages/PatientsRegistration.js";
-import DoctosRegistration from "./pages/DoctosRegistration.js";
+import DoctorsRegistration from "./pages/DoctorsRegistration.js";
 import ScrollToTop from "./components/ScrollToTop.js";
 import Signup from "./pages/Signup";
 
@@ -37,7 +37,7 @@ const App = () => {
           <Route exact path="/regambulances" element={<RegAmbulance />} />
           <Route exact path="/regmedicines" element={<RegMedicine />} />
           <Route exact path="/patientsregistration" element={<PatientsRegistration />}/>
-          <Route exact path="/doctorsregistration" element={<DoctosRegistration />}/>
+          <Route exact path="/doctorsregistration" element={<DoctorsRegistration />}/>
         </Routes>
       </Router>
     </div>
