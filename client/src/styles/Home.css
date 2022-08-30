@@ -31,14 +31,16 @@
   font-weight: bold;
 }
 
+/* Get In Touch Button */
 .heading__info__cta {  
   background-color: #3029ff;  
   border-radius: 30px;
   color: white;
-  font-size: clamp(1rem, 1vw, 1rem);
+  font-size: clamp(1.1rem, 1vw, 1rem);
   font-weight: bold;
+  letter-spacing: 0.6px;
   width: 150px;
-  box-shadow: rgba(48, 41, 255, 0.5) 0px 5px 15px;
+  box-shadow: rgba(48, 41, 255) 0px 5px 15px;
   border: 2px solid transparent;
   transition: 0.5s;
   height: 50px;
@@ -70,6 +72,16 @@
   .heading__info__cta {
     max-width: 15rem;
     margin-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) { 
+  .heading__info__cta {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    max-width: 12rem;
+    margin-top: 15rem;
   }
 }
 
