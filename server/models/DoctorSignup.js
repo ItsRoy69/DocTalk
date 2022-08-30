@@ -24,6 +24,6 @@ const DoctorSingup = new mongoose.Schema({
         type:"String",
         required:true
     }
-})
+});
 const Doctor_Signup = mongoose.model("Doctor_Signup", DoctorSingup);
-module.exports = Doctor_Signup
+module.exports = Doctor_Signup;

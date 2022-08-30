@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link to="/doctors">Doctors</Link>
           </li>
           <li>
-            <Link to="/doctor-signup">Signup</Link>
+            <Link to="/signup">Signup</Link>
           </li>
           <li>
             <HashLink smooth to="/#contact">
@@ -97,6 +97,6 @@ const Navbar = () => {
       ></div>
     </nav>
 	)
-}
+};
 
-export default Navbar
+export default Navbar;

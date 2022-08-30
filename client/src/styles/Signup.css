@@ -1,0 +1,28 @@
+.signup-container{
+    display: grid;
+    place-items: center;
+    margin-bottom: 2.5vw;
+}
+
+.signup-form{
+    width: 35vw;
+    display: grid;
+    place-items: center;
+}
+
+.user-types{
+    position: relative;
+    top: 1.5vw;
+    display: grid;
+    place-items: center;
+    row-gap: 1.5vw;
+}
+
+.user-type{
+    text-align: center;
+    width: 7.5vw;
+    height: 3vw;
+    font-size: 1.25rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}

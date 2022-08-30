@@ -12,21 +12,19 @@ router.get("/plasma", async (req, res) => {
   }
 });
 
-//* name: "", ph: "", bg: "", cdate: "", address: "", city: "kolkata", pincode: ""
-
 //* Route 2
 router.post("/plasma", async (req, res) => {
   try {
-    const { Name, Phone_no, Blood_group, C_Date, Address, City, Pincode } =
-      req.body;
+    const { name, phone, bloodGroup, cDate, address, city, pincode } =
+      req.body.formData;
     const plasmadata = Plasma({
-      Name: Name,
-      Phone_no: Phone_no,
-      Blood_group: Blood_group,
-      C_Date: C_Date,
-      Address: Address,
-      City: City,
-      Pincode: Pincode,
+      name: name,
+      phone: phone,
+      bloodGroup: bloodGroup,
+      cDate: cDate,
+      address: address,
+      city: city,
+      pincode: pincode
     });
     await plasmadata.save();
     res.status(200).json(plasmadata);

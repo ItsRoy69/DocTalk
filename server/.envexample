@@ -1,0 +1,8 @@
+/* To connect the database*/
+
+1. Create a ".env" file locally in the server directory.
+2. Create a variable "DATABASE".
+3. Assign a url to the "DATABASE" variable.   
+
+/* Example */
+DATABASE = "http://127***********/asd*"
