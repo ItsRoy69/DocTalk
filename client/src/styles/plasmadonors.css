@@ -1,0 +1,180 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&family=Poppins:ital,wght@0,400;1,100&display=swap');
+
+
+/* bubbles styling */
+.bubble-wrapper{
+    width: 100%;
+    background-color: transparent;
+    
+}
+.bubble-wrapper>div{
+    height: 60px;
+    width: 60px;
+    border: 2px solid #3029ff;
+    border-radius: 50%;
+    background-image: linear-gradient(to top right, #3029ff,#3029ff );
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+}
+.bubble-wrapper div .dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background:  #ffff;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+.bubble-wrapper div:nth-child(1){
+    top: 650%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+}
+
+
+.bubble-wrapper div:nth-child(2){
+    top: 60%;
+    left: 85%;
+    animation: animate 10s linear infinite;
+}
+
+.bubble-wrapper div:nth-child(3){
+    top: 40%;
+    left: 60%;
+    animation: animate 3s linear infinite;
+}
+
+.bubble-wrapper div:nth-child(4){
+    top: 53%;
+    left: 45%;
+    animation: animate 7s linear infinite;
+}
+.bubble-wrapper div:nth-child(5){
+    top: 75%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.bubble-wrapper div:nth-child(6){
+    top: 8%;
+    left: 60%;
+    animation: animate 3s linear infinite;
+}
+
+.bubble-wrapper div:nth-child(7){
+    top: 90%;
+    left: 40%;
+    animation: animate 5s linear infinite;
+}
+.bubble-wrapper div:nth-child(8){
+    top: 95%;
+    left: 58%;
+    animation: animate 2s linear infinite;
+}
+.bubble-wrapper div:nth-child(9){
+    top: 100%;
+    left: 58%;
+    animation: animate 6s linear infinite;
+}
+.bubble-wrapper div:nth-child(10){
+    top: 95%;
+    left: 58%;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: scale(0) translateY(0) rotate(70deg);
+    }
+
+    100%{
+        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+}
+
+/* BUBBLES END */
+
+
+/* SEARCH FIELD */
+.search{
+    margin-top: 65px;
+}
+
+.search-field{
+ border: 1px solid #3029ff;
+ opacity: 0.3;
+ padding: 20px;
+height: 40px;
+width: 30%;
+
+}
+
+.search-field-button{
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 5px;
+    width: 80px;
+    border: none;
+    outline: none;
+    color: #ffff;
+    background: #3029ff;
+}
+/* SEARCH FIELD ENDS */
+.design{
+    color: #3029ff ;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    margin-top: 60px;
+    max-width: 100%;
+    font-style: normal;
+    font-size: 40px;
+}
+.plasma-contanier{
+    /* height: 200px; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    /* overflow-y: scroll; */
+}
+.plasma-display{
+    height: 300px;
+    width: 300px;
+
+}
+.plasma-display-items{
+    line-height: 1;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: left;
+}
+.plasma-display-items> p> span{
+margin-left: 10px;
+}
+
+@media screen and (max-width:767px){
+    .search-field{
+        width: 50%;
+    }
+    .design{
+        font-size: 30px;
+    }
+
+}
+@media screen and (max-width:480px){
+    .search-field{
+        width: 70%;
+    }
+    .design{
+        font-size: 25px;
+    }
+    .search-field-button{
+    display: none;
+    }
+    .search>input{
+  border-radius: 10px;
+    }
+}
