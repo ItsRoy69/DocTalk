@@ -1,0 +1,199 @@
+/* Styles For Oxygen Supplier Page */
+
+@import url("https://fonts.googleapis.com/css?family=Alatsi");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body{ 
+    font-family: "Montserrat";
+}
+
+.head-container{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../assets/images/oxygenSupplierBannerImage.jpg);
+    height: 50%;
+    /* text-align: center; */
+    /* margin: auto; */
+    padding: 220px 200px 180px 200px;
+    display:block;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position:relative;
+    margin-bottom: 50px;
+}
+
+.searchBar {
+    /* margin-top: 15px; */
+	background: white;
+	/* border: 1px solid #0603e6; */
+	border-radius: 5px;
+	padding: 15px;
+	display: flex;
+	gap: 0.4rem;
+	width: 500px;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.searchBar:hover{ 
+    /* box-shadow: 2px 2px white; */
+}
+
+.main-heading{
+    text-align: center;
+    position: relative;
+    font-size: 35px;
+    color:white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    font-weight:bold;
+    /* text-shadow: 1px 1px white; */
+    letter-spacing: 2px;
+    font-family: "Montserrat";
+}
+
+.loading-container{ 
+    margin-bottom: 50px;
+}
+
+.container-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+	padding: 0;
+}
+
+.searchbar input {
+	width: 100%;
+	height: 40px;
+	border: none;
+	outline: none;
+}
+
+.oxygenSupplier {
+	position: relative;
+	margin: 0 5px 0 5px;
+}
+
+.oxygenSupplier-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #3832f3;
+	box-shadow: inset -100px 0px 80px 20px rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	width: 100%;
+	padding: 50px;
+	align-items: center;
+	margin: 0.5rem 0;
+}
+
+.oxygenSupplier-container:hover{ 
+	box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+}
+
+.oxygenSupplier-container .details {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.supplier-name {
+	font-family: "Montserrat";
+	font-weight: bold;
+	color: white;
+	font-size: 2.4rem;
+	text-align: center;
+}
+
+.oxygenSupplier-container .details h5 {
+	font-family: "Montserrat";
+	font-weight: 900;
+	color: #ffffff;
+}
+
+.info div {
+	display: flex;
+	width: 100%;
+}
+
+.oxygenSupplier-container .details svg {
+	padding-right: 5px;
+	color: white;
+	min-height: 20px;
+	min-width: 20px;
+}
+
+.oxygenSupplier {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+.oxygenSupplier-container img {
+	width: 200px;
+	height: 200px;
+	border-radius: 10px; 
+	object-fit: cover;
+}
+
+.address h5 {
+	padding-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
+	.container-heading {
+		flex-direction: column;
+		padding: 0 10px 0 10px;
+	}
+	.heading {
+		font-size: 27px;
+		text-align: center;
+		width: 100%;
+		line-height: 30px;
+	}
+	.searchbar {
+		width: 100%;
+		margin: 5px;
+	}
+
+	.oxygenSupplier{ 
+		padding: 0px 10px 0px 10px;
+	}
+
+	.oxygenSupplier-container {
+		display: flex;
+		flex-direction: column;
+		padding: 25px;
+		position: relative;
+	}
+	.oxygenSupplier-container img {
+		position: relative;
+		height: 40%;
+		width: auto;
+	}
+	.oxygenSupplier-container .details {
+		display: flex;
+		font-size: 2px;
+		flex-direction: column-reverse;
+	}
+	.info {
+		flex-direction: column;
+	}
+	.supplier-name {
+		font-size: 1.8rem;
+	}
+}
