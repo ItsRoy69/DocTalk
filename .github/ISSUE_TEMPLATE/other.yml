@@ -23,5 +23,5 @@ body:
   - type: markdown
     attributes:
       value: |
-        Follow me on Twitter [here]https://twitter.com/itsmeroy69)
+        Follow me on Twitter [here](https://twitter.com/itsmeroy69)
          Feel free to check out other cool repositories [here](https://github.com/ItsRoy69)
