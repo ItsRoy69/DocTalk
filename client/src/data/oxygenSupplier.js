@@ -1,4 +1,4 @@
-// Rohit - New Page
+// Data for Oxygen Suppliers
 
 export const banner = require("../assets/images/oxygenSupplierBannerImage.jpg"); 
 
@@ -10,14 +10,14 @@ export const oxygenSuppliers = [
 		_id: 10001,
 		name: "Red Cross Medical Oxygen Suppliers",
 		hospital: "Red Cross Nursing Home",
-		phone: "0000000000",
+		phone: "9898989898",
 		location: {
 			address: "near ICE Factory, Jaffarpur Chal Bazar, Jaffarpur Panchanantala, Barrackpore, West Bengal 700122",
 			country: "India",
 			city: "Kolkata",
 		},
-		available: 16,
-		charges: "5000",
+		available: 160,
+		charges: "1600/Cylinder",
 		rating: 4.9,
 	},
 ]

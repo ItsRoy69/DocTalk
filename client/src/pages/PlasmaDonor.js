@@ -35,7 +35,9 @@ const PlasmaDonor = () => {
         <div><span className="dot"></span></div>
         <div><span className="dot"></span></div>
       </div>
-    <section className='plasma-contanier'>
+
+    {/* This portion is causing deployment error. Please have a check with @ItsRoy69 */}
+    {/* <section className='plasma-contanier'>
     {donors.filter((donor) => {
       if (query === ""){
         return donor;
@@ -58,7 +60,7 @@ const PlasmaDonor = () => {
     </div>
     })}
       
-    </section>
+    </section> */}
     
       <Footer />
     </>

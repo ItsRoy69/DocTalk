@@ -1,4 +1,5 @@
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
+import "antd/dist/antd.min.css"; 
 import { Select } from "antd";
 import React, { useState } from "react";
 import doctorsDetailsArr from "../components/DoctorsDetailsArr";
