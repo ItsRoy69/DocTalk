@@ -4,10 +4,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* position: fixed; */
-    left: 0;
-    bottom: 0;
-    width: 100%;
   }
 
 .logo-title-container {
@@ -50,7 +46,7 @@
   margin: 0;
 }
 
-.footer-section p a:hover{
+.footer-section p a:hover{ 
     color: white;
 }
 
@@ -64,7 +60,7 @@
   }
 }
 @media screen and (max-width: 1087px) {
-  .footer-container {
+  .footer-container { 
     padding: 4rem 5rem;
   }
   .footer-section {

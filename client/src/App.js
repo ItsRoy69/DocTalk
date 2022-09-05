@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import PlasmaDonor from "./pages/PlasmaDonor.js";
 import HospitalBed from "./pages/HospitalBed.js";
-import OxygenSupplier from "./pages/OxygenSupplier.jsx";
+import OxygenSupplier from "./pages/OxygenSupplier.js";
 import Ambulances from "./pages/Ambulances.jsx";
 import Doctors from "./pages/Doctors.js";
 import Medicines from "./pages/Medicines.js";
