@@ -1,3 +1,5 @@
+// Ambulance Page
+
 import Navbar from "../components/Navbar"
 import Ambulance from "../components/Ambulance"
 import Footer from "../components/Footer"
@@ -58,4 +60,4 @@ const Ambulances = () => {
 	)
 }
 
-export default Ambulances
+export default Ambulances;

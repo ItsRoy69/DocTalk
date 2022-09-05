@@ -1,0 +1,215 @@
+/* CSS Styles for Oxygen Supplier Page, Components, Data */
+
+@import url('https://fonts.googleapis.com/css?family=Alatsi');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: 'Montserrat';
+  margin: auto;
+}
+
+.head-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/images/oxygenSupplierBannerImage.jpg);
+  height: 50%;
+  /* text-align: center; */
+  /* margin: auto; */
+  padding: 220px 200px 180px 200px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.searchBar {
+  /* margin-top: 15px; */
+  background: white;
+  /* border: 1px solid #0603e6; */
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  gap: 0.4rem;
+  width: 500px;
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-heading {
+  text-align: center;
+  position: relative;
+  font-size: 35px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  font-weight: bold;
+  /* text-shadow: 1px 1px white; */
+  letter-spacing: 2px;
+  font-family: 'Montserrat';
+}
+
+.loading-container {
+  margin-bottom: 50px;
+}
+
+.container-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0;
+}
+
+.searchbar input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+}
+
+.oxygenSupplier {
+  position: relative;
+  margin: 0 5px 0 5px;
+}
+
+.oxygenSupplier-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #3832f3;
+  box-shadow: inset -100px 0px 80px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 100%;
+  padding: 50px;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+/* .oxygenSupplier-container:hover{ 
+	box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
+} */
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.oxygenSupplier-container .details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.supplier-name {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: white;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.oxygenSupplier-container .details h5 {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.info div {
+  display: flex;
+  width: 100%;
+}
+
+.oxygenSupplier-container .details svg {
+  padding-right: 5px;
+  color: white;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+.oxygenSupplier {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.oxygenSupplier-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.address h5 {
+  padding-right: 5px;
+}
+/* 
+Mobile responsive mode only */
+@media only screen and (max-width: 768px) {
+  .head-container {
+    height: 50%;
+    padding: 150px 150px 100px 150px;
+	margin-bottom: 25px;
+  }
+  .searchBar {
+    width: 350px;
+    padding: 10px;
+    margin-top: 0px;
+  }
+  .main-heading {
+    font-size: 35px;
+    width: fit-content;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .heading {
+    font-size: 27px;
+    text-align: center;
+    width: 100%;
+    line-height: 30px;
+  }
+  .searchbar {
+    width: 100%;
+    margin: 5px;
+  }
+
+  .oxygenSupplier {
+    padding: 0px 8px 0px 8px;
+  }
+
+  .oxygenSupplier-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+  }
+  .oxygenSupplier-container img {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    height: 35%;
+    width: 75%;
+  }
+  .details {
+    margin-top: 2px;
+    display: flex;
+    font-size: 0.8rem;
+    flex-direction: column-reverse;
+  }
+  .info {
+    flex-direction: column;
+    font-size: 0.8rem;
+  }
+  .supplier-name {
+    margin-bottom: 0px;
+    font-size: 1.7rem;
+  }
+}
