@@ -13,7 +13,7 @@ import {
 
 import "../styles/OxygenSupplier.css"
 
-import { oxygenSupplierImage } from "../data/oxygenSupplier";
+import { oxygenSupplierImage } from "../data/oxygenSuppliers.js";
 
 const Ratings = ({ rating }) => {
 	const full_stars = Math.floor(rating)

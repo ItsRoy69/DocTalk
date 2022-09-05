@@ -7,8 +7,8 @@ import Footer from '../components/Footer';
 import "../styles/OxygenSupplier.css";
 
 
-import OxygenSupplier from "../components/OxygenSupply";
-import oxygenSuppliers from "../data/oxygenSupplier";
+import OxygenSupplier from "../components/OxygenSupply.js";
+import {oxygenSuppliers} from "../data/oxygenSuppliers.js";
 // import { banner } from "../data/oxygenSupplier";
 
 import { BsSearch as Search } from "react-icons/bs";
