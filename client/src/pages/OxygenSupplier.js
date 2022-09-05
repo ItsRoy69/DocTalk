@@ -8,7 +8,7 @@ import "../styles/OxygenSupplier.css";
 
 
 import OxygenSupplier from "../components/OxygenSupply";
-import { oxygenSuppliers } from "../data/oxygenSupplier";
+import oxygenSuppliers from "../data/oxygenSupplier";
 // import { banner } from "../data/oxygenSupplier";
 
 import { BsSearch as Search } from "react-icons/bs";
