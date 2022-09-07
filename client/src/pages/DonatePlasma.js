@@ -43,9 +43,6 @@ function DonatePlasma() {
         if (NumberValidation.length < 10 || NumberValidation < 1){
             alert("Not a Valid Number");
         }
-        else{
-            alert("Correct Number");
-        }
     };
 
     useEffect(()=>{
