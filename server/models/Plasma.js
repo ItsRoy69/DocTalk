@@ -2,20 +2,36 @@ const mongoose = require("mongoose");
 
 const Plasma = new mongoose.Schema(
   {
-    name: {
-      required: true,
+      firstName: {
+        type: String,
+        required: true,
+        min: 2,
+        max: 40
+    },
+    lastName: {
+        type: String,
+        required: true,
+        min: 2,
+        max: 40
+    },
+    email: {
       type: String,
-      max: 32,
+      required: true,
+      unique: true,
+      min: 6,
+      max: 40
+    },
+    password: {
+        type: String,
+        required: true,
+        min: 3,
+        max: 30
     },
     phone: {
       required: true,
       type: String,
     },
     bloodGroup: {
-      required: true,
-      type: String,
-    },
-    cDate: {
       required: true,
       type: String,
     },
@@ -36,6 +52,4 @@ const Plasma = new mongoose.Schema(
   { timestamps: true }
 );
 
-const model = mongoose.model("Plasma", Plasma);
-
-module.exports = model;
+module.exports.Plasma = mongoose.model("Plasma", Plasma);
