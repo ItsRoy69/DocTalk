@@ -46,6 +46,8 @@ function PatientsRegistration() {
         });
     },[firstName,lastName,email,password,illness,exactLocation]);
 
+    const image_size = 30;
+
     return (
     <>
         <Navbar/>
@@ -54,19 +56,19 @@ function PatientsRegistration() {
             <form onSubmit={(e)=>{handleSubmit(); e.preventDefault();}} className='patients-registration-form'>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsPersonSquare size={60} color="#0603E6"/>
+                    <BsPersonSquare size={image_size} color="#0603E6"/>
                     </div>
                     <input value={firstName} type="text" onChange={(e)=>{setFirstName(e.target.value)}} placeholder='First Name'/>
                 </div>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsPersonSquare size={60} color="#0603E6"/>
+                    <BsPersonSquare size={image_size} color="#0603E6"/>
                     </div>
                     <input value={lastName} type="text" onChange={(e)=>{setLastName(e.target.value)}} placeholder='Last Name'/>
                 </div>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsEnvelopeFill size={60} color="#0603E6"/>
+                    <BsEnvelopeFill size={image_size} color="#0603E6"/>
                     </div>
                     <input value={email} type="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder='Email'/>
                 </div>
@@ -75,7 +77,7 @@ function PatientsRegistration() {
                 </div>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsGlobe size={60} color="#0603E6"/>
+                    <BsGlobe size={image_size} color="#0603E6"/>
                     </div>
                     <input value={exactLocation} type="text" onChange={(e)=>{setExactLocation(e.target.value)}} placeholder='Exact Location'/>
                 </div>

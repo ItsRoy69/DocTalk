@@ -49,6 +49,8 @@ function DonatePlasma() {
         });
     },[name,phone,bloodGroup,cDate,address,city,pincode]);
 
+    const image_size = 30;
+
     return (
     <>
         <Navbar/>
@@ -57,31 +59,31 @@ function DonatePlasma() {
             <form onSubmit={(e)=>{handleSubmit(); e.preventDefault();}} className='donate-plasma-form'>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsPersonSquare size={60} color="#0603E6"/>
+                    <BsPersonSquare size={image_size} color="#0603E6"/>
                     </div>
                     <input value={name} type="text" onChange={(e)=>{setName(e.target.value)}} placeholder='Name'/>
                 </div>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsTelephoneFill size={60} color="#0603E6"/>
+                    <BsTelephoneFill size={image_size} color="#0603E6"/>
                     </div>
                     <input value={phone} type="text" onChange={(e)=>{setPhone(e.target.value)}} placeholder='Phone'/>
                 </div>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsBuilding size={60} color="#0603E6"/>
+                    <BsBuilding size={image_size} color="#0603E6"/>
                     </div>
                     <input value={city} type="text" onChange={(e)=>{setCity(e.target.value)}} placeholder='City'/>
                 </div>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsFillHouseFill size={60} color="#0603E6"/>
+                    <BsFillHouseFill size={image_size} color="#0603E6"/>
                     </div>
                     <input value={address} type="text" onChange={(e)=>{setAddress(e.target.value)}} placeholder='Address'/>
                 </div>
                 <div className="input-field">
                     <div className="input-image">
-                    <BsDropletHalf size={60} color="#0603E6"/>
+                    <BsDropletHalf size={image_size} color="#0603E6"/>
                     </div>
                     <input value={bloodGroup} type="text" onChange={(e)=>{setBloodGroup(e.target.value)}} placeholder='Blood Group'/>
                 </div>
