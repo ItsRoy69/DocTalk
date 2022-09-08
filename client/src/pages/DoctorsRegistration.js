@@ -50,6 +50,8 @@ function DoctorsRegistration() {
         })
     },[name,country,phone,city,hospitalName,speciality]);
 
+    const image_size = 30;
+
     return (
         <>
             <Navbar/>
@@ -58,37 +60,37 @@ function DoctorsRegistration() {
                 <form onSubmit={(e)=>{handleSubmit(); e.preventDefault();}} className='patients-registration-form'>
                     <div className="input-field">
                         <div className="input-image">
-                            <BsPersonSquare size={60} color="#0603E6"/>
+                            <BsPersonSquare size={image_size} color="#0603E6"/>
                         </div>
                         <input value={name} type="text" onChange={(e)=>{setName(e.target.value)}} placeholder='Name'/>
                     </div>
                     <div className="input-field">
                         <div className="input-image">
-                            <BsGlobe size={60} color="#0603E6"/>
+                            <BsGlobe size={image_size} color="#0603E6"/>
                         </div>
                         <input value={country} type="text" onChange={(e)=>{setCountry(e.target.value)}} placeholder='Country'/>
                     </div>
                     <div className="input-field">
                         <div className="input-image">
-                        <BsTelephoneFill size={60} color="#0603E6"/>
+                        <BsTelephoneFill size={image_size} color="#0603E6"/>
                         </div>
                         <input value={phone} type="text" onChange={(e)=>{setPhone(e.target.value)}} placeholder='Phone'/>
                     </div>
                     <div className="input-field">
                         <div className="input-image">
-                        <BsBuilding size={60} color="#0603E6"/>
+                        <BsBuilding size={image_size} color="#0603E6"/>
                         </div>
                         <input value={city} type="text" onChange={(e)=>{setCity(e.target.value)}} placeholder='City'/>
                     </div>
                     <div className="input-field">
                         <div className="input-image">
-                        <RiHospitalLine size={60} color="#0603E6"/>
+                        <RiHospitalLine size={image_size} color="#0603E6"/>
                         </div>
                         <input value={hospitalName} type="text" onChange={(e)=>{setHospitalName(e.target.value)}} placeholder='Hospital Name'/>
                     </div>
                     <div className="input-field">
                         <div className="input-image">
-                        <FaStethoscope size={60} color="#0603E6"/>
+                        <FaStethoscope size={image_size} color="#0603E6"/>
                         </div>
                         <input value={speciality} type="text" onChange={(e)=>{setSpecialty(e.target.value)}} placeholder='Speciality'/>
                     </div>

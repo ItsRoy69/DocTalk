@@ -107,3 +107,31 @@
         font-size: 32px;
       }
 }
+
+/* Style when input is focus eg. writing */
+.medicine-supplier
+  .medicine-supplier-form
+  .input-field
+  input:focus {
+  border: none;
+  font-family: "Aksara Bali Galang";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: black;
+}
+
+/* Style when input is not focused but it has not default value
+eg. there is something written.*/
+.medicine-supplier
+  .medicine-supplier-form
+  .input-field
+  input {
+  border: none;
+  font-family: "Aksara Bali Galang";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  color: black;
+}
+
