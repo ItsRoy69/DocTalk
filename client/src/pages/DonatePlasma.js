@@ -1,4 +1,3 @@
-import React,{ useState, useEffect} from "react";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import "../styles/DonatePlasma.css";
@@ -7,12 +6,7 @@ import {MdOutlinePersonPinCircle} from 'react-icons/md'
 
 function DonatePlasma() {
 
-    const [formData, setFormData] = useState();
-    const [name, setName] = useState();
-    const [phone, setPhone] = useState();
-    const [bloodGroup, setBloodGroup] = useState();
-    const [cDate, setCDate] = useState();
-    const [address, setAddress] = useState();
+	@@ -15,7 +16,8 @@ function DonatePlasma() {
     const [city, setCity] = useState();
     const [pincode, setPincode] = useState();
 
@@ -21,19 +15,7 @@ function DonatePlasma() {
         const request = {
             method:'POST',
             mode:'cors',
-            headers:{
-                'Content-Type': 'application/json'
-            },
-            redirect:'follow',
-            referrerPolicy:'no-referrer',
-            body: JSON.stringify({formData})
-        };
-
-        const myRequest = new Request("http://localhost:5000/plasma",request);
-        fetch(myRequest).then(function (response) {
-            return response;
-        }).then(function (response) {
-            console.log(response);
+	@@ -35,6 +37,15 @@ function DonatePlasma() {
         }).catch(function (e) {
             console.log(e);
         });
@@ -43,18 +25,13 @@ function DonatePlasma() {
         if (NumberValidation.length < 10 || NumberValidation < 1){
             alert("Not a Valid Number");
         }
+        else{
+            alert("Correct Number");
+        }
     };
 
     useEffect(()=>{
-        setFormData({
-            name: name,
-            phone: phone,
-            bloodGroup: bloodGroup,
-            cDate: cDate,
-            address: address,
-            city: city,
-            pincode: pincode
-        });
+	@@ -50,49 +61,56 @@ function DonatePlasma() {
     },[name,phone,bloodGroup,cDate,address,city,pincode]);
 
     return (
@@ -84,7 +61,7 @@ function DonatePlasma() {
                 <div className="input-field">
                     <div className="input-image">
                     <BsFillHouseFill size={40} color="#0603E6"/>
-                    
+
                     </div>
                     <input value={address} type="text" onChange={(e)=>{setAddress(e.target.value)}} placeholder='Address' required/>
                 </div>
@@ -115,5 +92,4 @@ function DonatePlasma() {
     </>
 )
 };
-
 export default DonatePlasma
