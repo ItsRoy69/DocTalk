@@ -1,23 +1,24 @@
-import React from 'react';
+import React from "react";
 import { useState, useEffect } from "react";
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import "../styles/OxygenSupplier.css";
 
-
 import OxygenSupplier from "../components/OxygenSupply.js";
-import {oxygenSuppliers} from "../data/oxygenSuppliers.js";
+import { oxygenSuppliers } from "../data/oxygenSuppliers.js";
 // import { banner } from "../data/oxygenSupplier";
 
 import { BsSearch as Search } from "react-icons/bs";
 import CreatableSelect from "react-select/creatable";
 
 const getDistinctLocations = (data) => {
-  const allZones = [].concat(data.map(oxygenSupplier => oxygenSupplier.location.city));
+  const allZones = [].concat(
+    data.map((oxygenSupplier) => oxygenSupplier.location.city)
+  );
   const distinctSet = new Set(allZones);
-  return [...distinctSet].map(zone => ({ value: zone, label: zone }));
+  return [...distinctSet].map((zone) => ({ value: zone, label: zone }));
 };
 
 const OxygenSupplierPage = () => {
@@ -26,7 +27,9 @@ const OxygenSupplierPage = () => {
   const [loading, setLoading] = useState(false); // Later controlled by states when fetching from database
   const Zones = getDistinctLocations(oxygenSuppliers);
   const locatedOxygenSuppliers = location
-    ? oxygenSuppliers.filter((oxygenSupplier) => oxygenSupplier.location.city === location)
+    ? oxygenSuppliers.filter(
+        (oxygenSupplier) => oxygenSupplier.location.city === location
+      )
     : oxygenSuppliers;
   const handleSelect = (e) => {
     setLoading(true);
@@ -61,12 +64,13 @@ const OxygenSupplierPage = () => {
         {loading ? (
           <h5 style={{ textAlign: "center" }}>Loading...</h5>
         ) : locatedOxygenSuppliers.length ? (
-          locatedOxygenSuppliers.map(item => 
+          locatedOxygenSuppliers.map((item) => (
             <OxygenSupplier oxygenSupplier={item} key={item._id} />
-          )
+          ))
         ) : (
           <h5 style={{ textAlign: "center" }}>
-            Currently no Oxygen Suppliers or Services were found in the selected region. 
+            Currently no Oxygen Suppliers or Services were found in the selected
+            region.
           </h5>
         )}
       </div>
