@@ -1,136 +1,105 @@
 @import url("https://fonts.googleapis.com/css?family=Alatsi");
 
 .patients-registration {
+  display: grid;
+  place-items: center;
   padding: 0.8rem 1.7rem;
+  width: 100%;
+  row-gap: 5vw;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(48, 41, 255, 0.5);
 }
 .patients-registration .heading {
   font-family: "Alatsi";
   font-style: normal;
   color: #3029ff;
-  font-size: 48px;
+  font-size: 2.5rem;
+  line-height: 10vw;
 }
-.patients-registration .patients-registration-form {
-  padding: 0 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
+
+.registration-body{
+  display: grid;
+  place-items: center;
+  row-gap: 5vw;
 }
-.patients-registration .patients-registration-form .input-field {
-  flex-basis: 45%;
+
+.patients-registration-form{
+  display: grid;
+  place-items: center;
+  row-gap: 5vw;
+}
+
+.input-field{
+  flex-basis: 20%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  background: #ffffff;
-  border: 1px solid #0603e6;
-  border-radius: 12px;
 }
-.patients-registration .patients-registration-form .input-field .input-image {
-  flex-basis: 5%;
+
+.input-field img{
+  width: 2rem;
+  aspect-ratio: 1;
 }
-.patients-registration .patients-registration-form .input-field input {
+
+input{
   border: none;
-  font-family: "Aksara Bali Galang";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.25);
-  outline: none;
-  flex-basis: 80%;
+  outline-style: none;
 }
-.patients-registration
-  .patients-registration-form
-  .input-field
-  input::placeholder {
+
+.btn-field{
+  display: grid;
+  place-items: center;
+  margin: 5vw 0;
+}
+
+.register-button{
   border: none;
-  font-family: "Aksara Bali Galang";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.25);
+  outline-style: none;
+  padding: 2.5vw 10vw;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-shadow: 0px 5px 10px rgba(48, 41, 255, 0.5);
 }
-.patients-registration .patients-registration-form .btn-field {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-basis: 45%;
+
+.register-button:hover{
+  background-color: rgba(48, 41, 255, 0.5);
+  transition: .3s ease-in-out;
 }
-.patients-registration .patients-registration-form .btn-field button {
-  width: 200px;
-  height: 55px;
-  background: #3029ff;
-  border-radius: 20px;
-  border: none;
-  font-family: "Alatsi";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  color: #ffffff;
-}
-.patients-registration .patients-registration-form .btn-field button:hover {
-    background: transparent;
-    border: 1px solid #3029ff;
-    box-shadow: 0px 4px 10px #3029ff;
-    background: #ffffff;
+
+@media(min-width:750px){
+  .patients-registration {
+    row-gap: 2.5vw;
+  }
+
+  .registration-body{
+    row-gap: 1.5vw;
+  }
+
+  .patients-registration-form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    row-gap: 1.5vw;
+  }
+
+  .patients-registration .heading {
+    font-family: "Alatsi";
+    font-style: normal;
     color: #3029ff;
-    transition: 0.3s;
-}
+    font-size: 3.5rem;
+    line-height: 5vw;
+  }
 
-@media screen and (max-width: 1059px) {
-    .patients-registration .patients-registration-form {
-        justify-content: center;
-      }
-      .patients-registration .patients-registration-form .input-field{
-        flex-basis: 70%;
-    }
-    .patients-registration .heading {
-      font-size: 32px;
-      text-align: center;
-    }
-}
-@media screen and (max-width: 581px) {
-    
-      .patients-registration .patients-registration-form .input-field{
-        flex-basis: 100%;
-      }
-      .patients-registration .patients-registration-form .input-field .input-image img{
-        width: 1.8rem;
-      }
-      .patients-registration .patients-registration-form .input-field input{
-        width: 1.8rem;
-        font-size: 25px;
-      }
-      .patients-registration .patients-registration-form .input-field input::placeholder{
-        font-size: 25px;
-      }
-      .patients-registration .heading {
-        font-size: 32px;
-      }
-}
+  .btn-field{
+    display: grid;
+    place-items: center;
+    margin: 2.5vw 0;
+  }
 
-/* Style when input is focus eg. writing */
-.patients-registration
-  .patients-registration-form
-  .input-field
-  input:focus {
-  border: none;
-  font-family: "Aksara Bali Galang";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  color: black;
-}
-
-/* Style when input is not focused but it has not default value
-eg. there is something written.*/
-.patients-registration
-  .patients-registration-form
-  .input-field
-  input {
-  border: none;
-  font-family: "Aksara Bali Galang";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  color: black;
+  .register-button{
+    padding: 1.5vw 5vw;
+    font-size: 1.25rem;
+  }
 }

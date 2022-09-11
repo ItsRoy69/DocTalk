@@ -1,90 +1,111 @@
+import React,{ useState, useEffect} from "react";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import "../styles/DonatePlasma.css";
-import { BsPersonSquare,BsTelephoneFill,BsGlobe,BsBuilding,BsFillHouseFill,BsDropletHalf, BsCalendarDate } from 'react-icons/bs';
-import {MdOutlinePersonPinCircle} from 'react-icons/md'
+import user from '../assets/images/user.png';
+import emailImg from '../assets/images/email.png';
+import passwordImg from '../assets/images/password.png';
+import cityImg from '../assets/images/city.png';
+import phoneImg from '../assets/images/phone.png';
+import addressImg from '../assets/images/address.png';
+import bloodImg from '../assets/images/blood.png';
+import pincodeImg from '../assets/images/zip-code.png';
 
 function DonatePlasma() {
 
-	@@ -15,7 +16,8 @@ function DonatePlasma() {
+    const [formData, setFormData] = useState();
+    const [firstName, setFirstName] = useState();
+    const [lastName, setLastName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [phone, setPhone] = useState();
+    const [bloodGroup, setBloodGroup] = useState();
+    const [address, setAddress] = useState();
     const [city, setCity] = useState();
     const [pincode, setPincode] = useState();
 
-    function handleSubmit(e){
-        e.preventDefault();
+    function handleSubmit(){
         const request = {
             method:'POST',
             mode:'cors',
-	@@ -35,6 +37,15 @@ function DonatePlasma() {
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            redirect:'follow',
+            referrerPolicy:'no-referrer',
+            body: JSON.stringify({formData})
+        };
+
+        const myRequest = new Request("http://localhost:5000/plasma",request);
+        fetch(myRequest).then(function (response) {
+            return response;
+        }).then(function (response) {
+            console.log(response);
         }).catch(function (e) {
             console.log(e);
         });
-
-        // Condition for appropriate mobile number
-        let NumberValidation = document.getElementById("numberInput").value;
-        if (NumberValidation.length < 10 || NumberValidation < 1){
-            alert("Not a Valid Number");
-        }
-        else{
-            alert("Correct Number");
-        }
     };
 
     useEffect(()=>{
-	@@ -50,49 +61,56 @@ function DonatePlasma() {
-    },[name,phone,bloodGroup,cDate,address,city,pincode]);
+        setFormData({
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: password,
+            phone: phone,
+            bloodGroup: bloodGroup,
+            address: address,
+            city: city,
+            pincode: pincode
+        });
+    },[firstName, lastName, email, password,phone,bloodGroup,address,city,pincode]);
 
     return (
-        <>
+    <>
         <Navbar/>
-        <div className='donate-plasma'>
+        <div className='donors-registration'>
             <h2 className='heading'>Add Yourself as Plasma Donor</h2>
-            <form onSubmit={handleSubmit} className='donate-plasma-form'>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsPersonSquare size={40} color="#0603E6"/>
+            <form onSubmit={(e)=>{handleSubmit(); e.preventDefault();}} className='registration-body'>
+                <div className="donors-registration-form">
+                    <div className="input-field">
+                        <img src={user} alt="first-name"/>
+                        <input value={firstName} type="text" onChange={(e)=>{setFirstName(e.target.value)}} placeholder='First Name'/>
                     </div>
-                    <input value={name} type="text" onChange={(e)=>{setName(e.target.value)}} placeholder='Name' required/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsTelephoneFill size={40} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={user} alt="last-name"/>
+                        <input value={lastName} type="text" onChange={(e)=>{setLastName(e.target.value)}} placeholder='Last Name'/>
                     </div>
-                    <input value={phone} type="number" onChange={(e)=>{setPhone(e.target.value)}} placeholder='Phone' id="numberInput" required/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsBuilding size={40} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={emailImg} alt="email"/>
+                        <input value={email} type="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder='Email'/>
                     </div>
-                    <input value={city} type="text" onChange={(e)=>{setCity(e.target.value)}} placeholder='City' required/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsFillHouseFill size={40} color="#0603E6"/>
-
+                    <div className="input-field">
+                    <img src={passwordImg} alt="password"/>
+                        <input value={password} type="password" onChange={(e)=>{setPassword(e.target.value)}} placeholder='Password'/>
                     </div>
-                    <input value={address} type="text" onChange={(e)=>{setAddress(e.target.value)}} placeholder='Address' required/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsDropletHalf size={40} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={phoneImg} alt="phone"/>
+                        <input value={phone} type="text" onChange={(e)=>{setPhone(e.target.value)}} placeholder='Phone'/>
                     </div>
-                    <input value={bloodGroup} type="text" onChange={(e)=>{setBloodGroup(e.target.value)}} placeholder='Blood Group' required/>
-                </div>
-                <div className="input-field">
-                <div className="input-image">
-                    <BsCalendarDate size={40} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={cityImg} alt="city"/>
+                        <input value={city} type="text" onChange={(e)=>{setCity(e.target.value)}} placeholder='City'/>
                     </div>
-                    <input value={cDate} type="text" onChange={(e)=>{setCDate(e.target.value)}}  placeholder='Date' required/>
-                </div>
-                <div className="input-field">
-                <div className="input-image">
-                    <MdOutlinePersonPinCircle size={40} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={addressImg} alt="address"/>
+                        <input value={address} type="text" onChange={(e)=>{setAddress(e.target.value)}} placeholder='Address'/>
                     </div>
-                    <input value={pincode} type="text" onChange={(e)=>{setPincode(e.target.value)}}  placeholder='Pincode' required/>
+                    <div className="input-field">
+                        <img src={bloodImg} alt="blood"/>
+                        <input value={bloodGroup} type="text" onChange={(e)=>{setBloodGroup(e.target.value)}} placeholder='Blood Group'/>
+                    </div>
+                    <div className="input-field">
+                        <img src={pincodeImg} alt="pincode"/>
+                        <input value={pincode} type="text" onChange={(e)=>{setPincode(e.target.value)}} placeholder='Pincode'/>
+                    </div>
                 </div>
                 <div className="btn-field">
-                    <button type="submit">Register</button>
+                    <button type="submit" className="register-button">Register</button>
                 </div>
             </form>
         </div>
@@ -92,4 +113,5 @@ function DonatePlasma() {
     </>
 )
 };
-export default DonatePlasma
+
+export default DonatePlasma;

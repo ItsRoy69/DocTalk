@@ -32,9 +32,6 @@ const Navbar = () => {
             <Link to="/plasmaDonor">Donors</Link>
           </li>
           <li>
-            <Link to="/donatePlasma">Donate</Link>
-          </li>
-          <li>
             <Link to="/doctors">Doctors</Link>
           </li>
           <li>
@@ -77,9 +74,6 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/plasmaDonor">Donors</Link>
-          </li>
-          <li>
-            <Link to="/donatePlasma">Donate</Link>
           </li>
           <li>
             <Link to="/doctors">Doctors</Link>

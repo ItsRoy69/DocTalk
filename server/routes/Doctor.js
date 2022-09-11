@@ -1,23 +1,24 @@
 const router = require("express").Router();
-const {Plasma} = require("../models/Plasma");
+const {Doctor} = require("../models/Doctor");
 const { hashPassword,comparePassword } = require("../utils/bcrypt");
 
+
 //* Route 1
-router.get("/plasma", async (req, res) => {
-  try {
-    const allplasma = await Plasma.find({});
-    return res.json(allplasma);
-  } catch (error) {
-    return res.status(500);
-  }
-});
+router.get("/doctor", async (req, res) => {
+    try {
+      const alldoctors = await Doctor.find({});
+      return res.json(alldoctors);
+    } catch (error) {
+      return res.status(500);
+    }
+  });
 
+// Registering a doctor
 //* Route 2
-//Registering a donor
 
-router.post("/plasma", async (req, res) => {
-    const { firstName, lastName, email, password, phone, bloodGroup, address, city, pincode } = req.body.formData;
-    if(!firstName || !lastName || !email || !password || !phone || !address || !bloodGroup || !city || !pincode){
+router.post("/doctor", async (req, res) => {
+    const { firstName, lastName, email, password, country, phone, city, hospital_name, speciality } = req.body.formData;
+    if(!firstName || !lastName || !email || !password || !country || !phone || !city || !hospital_name || !speciality ){
       return res.status(401).json({
         success: false,
         message: "all fields are required!"
@@ -25,44 +26,44 @@ router.post("/plasma", async (req, res) => {
     };
 
     //checking if email is taken
-    const existingDonor = await Plasma.findOne({ email: email });
-    if (existingDonor) {
+    const existingDoctor = await Doctor.findOne({ email: email });
+    if (existingDoctor) {
       return res.status(400).json({
           success: false,
           message: "email already exists!"
       });
     };
 
-    const plasma = new Plasma({
+    const doctor = new Doctor({
       firstName: firstName,
       lastName: lastName,
       email: email,
       password: hashPassword(password),
+      country: country,
       phone: phone,
-      bloodGroup: bloodGroup,
-      address: address,
       city: city,
-      pincode: pincode
+      hospital_name: hospital_name,
+      speciality: speciality
     });
 
-    plasma.save().then((plasma) => {
+    doctor.save().then((doctor) => {
       res.status(201).json({
           success: true,
-          message: "donor saved successfully!",
-          plasma: plasma
-      });
-  }).catch(err => {
+          message: "doctor saved successfully!",
+          doctor: doctor
+      })
+    }).catch(err => {
       res.status(500).json({
           success: false,
           message: err.message
       });
-  });
+    });
 });
 
 //*Route 3
-//Donor login
+//Doctor login
 
-router.post("/login/donor",async(req,res)=>{
+router.post("/login/doctor",async(req,res)=>{
   const {email,password} = req.body.formData;
   if(!email||!password){
       return res.status(401).json({
@@ -71,15 +72,15 @@ router.post("/login/donor",async(req,res)=>{
       });
   };
 
-  const plasma =await Plasma.findOne({email:email});
-  if(!plasma){
+  const doctor =await Doctor.findOne({email:email});
+  if(!doctor){
       return res.status(401).json({
           success:false,
           message:"incorrect username or password!"
       });
   };
 
-  const isMatch=comparePassword(password,plasma.password);
+  const isMatch=comparePassword(password,doctor.password);
   if(!isMatch){
       return res.status(401).json({
           success:false,
@@ -89,8 +90,8 @@ router.post("/login/donor",async(req,res)=>{
 
   res.status(200).json({
       success:true,
-      message:"donor logged in successfully!",
-      plasma:plasma
+      message:"doctor logged in successfully!",
+      doctor:doctor
   });
 });
 
