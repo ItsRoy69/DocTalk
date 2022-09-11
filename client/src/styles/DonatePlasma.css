@@ -8,6 +8,7 @@
   font-style: normal;
   color: #3029ff;
   font-size: 48px;
+  text-align: center;
 }
 .donate-plasma .donate-plasma-form {
   padding: 0 0.5rem;
@@ -22,9 +23,18 @@
   gap: 0.5rem;
   padding: 0.5rem;
   background: #ffffff;
-  border: 1px solid #0603e6;
+  border: 1px solid #3d3bcc;
   border-radius: 12px;
 }
+
+#numberInput::-webkit-inner-spin-button , #numberInput::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
+.donate-plasma .donate-plasma-form .input-field:active {
+  box-shadow: inset 0 1px 1px #dab6b6, 0 0 8px #0603e6;
+}
+
 .donate-plasma .donate-plasma-form .input-field .input-image {
   flex-basis: 5%;
 }
@@ -34,7 +44,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
-  color: rgba(0, 0, 0, 0.25);
+  color: rgb(14, 14, 77);
   outline: none;
   flex-basis: 80%;
 }
