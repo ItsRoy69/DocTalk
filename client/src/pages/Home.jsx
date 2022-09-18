@@ -15,7 +15,10 @@ import helpingHand3 from "../assets/images/helpingHand3.png"
 import helpingHand4 from "../assets/images/helpingHand4.png"
 import helpingHand5 from "../assets/images/helpingHand5.png"
 import helpingHand6 from "../assets/images/helpingHand6.png"
-import { BsPersonSquare, BsEnvelopeFill, BsFillBookmarkFill, BsMessenger } from "react-icons/bs"
+import user from '../assets/images/user.png';
+import emailImg from '../assets/images/email.png';
+import subject from '../assets/images/subject.png';
+import message from '../assets/images/message.png';
 import { Link } from "react-router-dom"
 import "../styles/Home.css"
 
@@ -136,26 +139,25 @@ const Home = () => (
 				<div className="contact__main">
 					<div className="contact__form">
 						<div className="input__name">
-							<div className="input_container_name">
-								<BsPersonSquare size={40} color="#0603E6" />
+							<div className="input_container">
+								<img src={user} alt="first-name"/>
 								<input type="text" className="contact__form__name" placeholder="FirstName" />
 							</div>
-							<div className="input_container_name">
-								<BsPersonSquare size={40} color="#0603E6" />
+							<div className="input_container">
+								<img src={user} alt="last-name"/>
 								<input type="text" className="contact__form__name" placeholder="LastName" />
 							</div>
 						</div>
-						<div className="input_container_mail">
-							<BsEnvelopeFill size={40} color="#0603E6" />
+						<div className="input_container">
+							<img src={emailImg} alt="email"/>
 							<input type="email" className="contact__form__email" placeholder="Email" />
 						</div>
-
 						<div className="input_container">
-							<BsFillBookmarkFill size={40} color="#0603E6" />
+							<img src={subject} alt="subject"/>
 							<input type="text" className="contact__form__subject" placeholder="Subject" />
 						</div>
 						<div className="input_container">
-							<BsMessenger size={40} color="#0603E6" />
+							<img src={message} alt="message"/>
 							<textarea className="contact__form__message" placeholder="Message" />
 						</div>
 						<button className="contact__form__button" type="submit">
@@ -172,4 +174,4 @@ const Home = () => (
 	</>
 )
 
-export default Home
+export default Home;
