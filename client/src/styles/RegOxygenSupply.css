@@ -1,136 +1,104 @@
 @import url("https://fonts.googleapis.com/css?family=Alatsi");
 
 .oxygen-supplier {
+  display: grid;
+  place-items: center;
   padding: 0.8rem 1.7rem;
+  width: 100%;
+  row-gap: 5vw;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(48, 41, 255, 0.5);
 }
 .oxygen-supplier .heading {
   font-family: "Alatsi";
   font-style: normal;
   color: #3029ff;
-  font-size: 48px;
+  font-size: 2.5rem;
+  line-height: 10vw;
 }
-.oxygen-supplier .oxygen-supplier-form {
-  padding: 0 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
+
+.registration-body{
+  display: grid;
+  place-items: center;
+  row-gap: 5vw;
 }
-.oxygen-supplier .oxygen-supplier-form .input-field {
-  flex-basis: 45%;
+
+.oxygen-supplier-form {
+  display: grid;
+  place-items: center;
+  row-gap: 5vw;
+}
+.input-field {
+  flex-basis: 20%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  background: #ffffff;
-  border: 1px solid #0603e6;
-  border-radius: 12px;
 }
-.oxygen-supplier .oxygen-supplier-form .input-field .input-image {
-  flex-basis: 5%;
-}
-.oxygen-supplier .oxygen-supplier-form .input-field input {
-  border: none;
-  font-family: "Aksara Bali Galang";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.25);
-  outline: none;
-  flex-basis: 80%;
-}
-.oxygen-supplier
-  .oxygen-supplier-form
-  .input-field
-  input::placeholder {
-  border: none;
-  font-family: "Aksara Bali Galang";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.25);
-}
-.oxygen-supplier .oxygen-supplier-form .btn-field {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-basis: 45%;
-}
-.oxygen-supplier .oxygen-supplier-form .btn-field button {
-  width: 200px;
-  height: 55px;
-  background: #3029ff;
-  border-radius: 20px;
-  border: none;
-  font-family: "Alatsi";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  color: #ffffff;
-}
-.oxygen-supplier .oxygen-supplier-form .btn-field button:hover {
-    background: transparent;
-    border: 1px solid #3029ff;
-    box-shadow: 0px 4px 10px #3029ff;
-    background: #ffffff;
-    color: #3029ff;
-    transition: 0.3s;
+.input-field img{
+  width: 2rem;
+  aspect-ratio: 1;
 }
 
-@media screen and (max-width: 1059px) {
-    .oxygen-supplier .oxygen-supplier-form {
-        justify-content: center;
-      }
-      .oxygen-supplier .oxygen-supplier-form .input-field{
-        flex-basis: 70%;
-    }
-    .oxygen-supplier .heading {
-      font-size: 32px;
-      text-align: center;
-    }
-}
-@media screen and (max-width: 581px) {
-    
-      .oxygen-supplier .oxygen-supplier-form .input-field{
-        flex-basis: 100%;
-      }
-      .oxygen-supplier .oxygen-supplier-form .input-field .input-image img{
-        width: 1.8rem;
-      }
-      .oxygen-supplier .oxygen-supplier-form .input-field input{
-        width: 1.8rem;
-        font-size: 25px;
-      }
-      .oxygen-supplier .oxygen-supplier-form .input-field input::placeholder{
-        font-size: 25px;
-      }
-      .oxygen-supplier .heading {
-        font-size: 32px;
-      }
+input{
+  border: none;
+  outline-style: none;
 }
 
-/* Style when input is focus eg. writing */
-.oxygen-supplier
-  .oxygen-supplier-form
-  .input-field
-  input:focus {
-  border: none;
-  font-family: "Aksara Bali Galang";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  color: black;
+.btn-field{
+  display: grid;
+  place-items: center;
+  margin: 5vw 0;
 }
 
-/* Style when input is not focused but it has not default value
-eg. there is something written.*/
-.oxygen-supplier
-  .oxygen-supplier-form
-  .input-field
-  input {
+.register-button{
   border: none;
-  font-family: "Aksara Bali Galang";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  color: black;
+  outline-style: none;
+  padding: 2.5vw 10vw;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-shadow: 0px 5px 10px rgba(48, 41, 255, 0.5);
 }
+
+.register-button:hover{
+  background-color: rgba(48, 41, 255, 0.5);
+  transition: .3s ease-in-out;
+}
+
+@media(min-width:750px){
+  .oxygen-supplier {
+    row-gap: 2.5vw;
+  }
+
+  .registration-body{ 
+      row-gap: 1.5vw;
+  }
+
+  .oxygen-supplier-form{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 60%;
+      justify-content: space-around;
+      row-gap: 1.5vw;
+  }
+
+  .oxygen-supplier .heading {
+      font-family: "Alatsi";
+      font-style: normal;
+      color: #3029ff;
+      font-size: 3.5rem;
+      line-height: 5vw;
+  }
+
+  .btn-field{
+      display: grid;
+      place-items: center;
+      margin: 2.5vw 0;
+  }
+
+  .register-button{
+      padding: 1.5vw 5vw;
+      font-size: 1.25rem;
+  }
+}
+
