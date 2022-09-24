@@ -1,69 +1,58 @@
 import React from 'react';
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
 import "../styles/RegHospitalBed.css";
-
-import { BsPersonSquare,BsTelephoneFill,BsGlobe,BsBuilding,BsFillHouseFill} from 'react-icons/bs';
-import { FaBed, FaRegHospital} from "react-icons/fa";
-
-const image_size = 30;
+import user from '../assets/images/user.png';
+import countryImg from '../assets/images/country.png';
+import cityImg from '../assets/images/city.png';
+import phoneImg from '../assets/images/phone.png';
+import hospitalImg from '../assets/images/hospital1.png';
+import addressImg from '../assets/images/address.png';
+import hospitalbed from '../assets/images/hospital-bed.png';
 
 function RegHospitalBed() {
-  return (
+    return (
     <>
         <Navbar/>
         <div className='hospital-bed-registration'>
             <h2 className='heading'>Hospital Bed Supplier Registration</h2>
-            <form className='hospital-bed-registration-form'>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsPersonSquare size={image_size} color="#0603E6"/>
+            <form className='registration-body'>
+                <div className='hospital-bed-registration-form'>
+                    <div className="input-field">
+                        <img src={user} alt="first-name"/>
+                        <input type="text" placeholder='Name'/>
                     </div>
-                    <input type="text" placeholder='Name'/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <FaRegHospital size={image_size} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={hospitalImg} alt="hospital"/>
+                        <input type="text" placeholder='Hospital Name'/>
                     </div>
-                    <input type="text" placeholder='Hospital Name'/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsTelephoneFill size={image_size} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={phoneImg} alt="phone"/>
+                        <input type="text" placeholder='Phone'/>
                     </div>
-                    <input type="text" placeholder='Phone'/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsFillHouseFill size={image_size} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={addressImg} alt="address"/>
+                        <input type="text" placeholder='Address'/>
                     </div>
-                    <input type="text" placeholder='Address'/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsGlobe size={image_size} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={countryImg} alt="country"/>
+                        <input type="text" placeholder='Country'/>
                     </div>
-                    <input type="text" placeholder='Country'/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <BsBuilding size={image_size} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={cityImg} alt="city"/>
+                        <input type="text" placeholder='City'/>
                     </div>
-                    <input type="text" placeholder='City'/>
-                </div>
-                <div className="input-field">
-                    <div className="input-image">
-                    <FaBed size={image_size} color="#0603E6"/>
+                    <div className="input-field">
+                        <img src={hospitalbed} alt="hospitalbed"/>
+                        <input type="text" placeholder='Beds Available'/>
                     </div>
-                    <input type="text" placeholder='Beds Available'/>
                 </div>
                 <div className="btn-field">
-                    <button>Register</button>
+                    <button className='register-button'>Register</button>
                 </div>
             </form>
         </div>
+        <Footer/>
     </>
   )
 }
