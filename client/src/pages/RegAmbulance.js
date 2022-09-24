@@ -11,8 +11,6 @@ import ambulance from '../assets/images/ambulance.png';
 
 import "../styles/RegAmbulance.css";
 
-const image_size = 30;
-
 const RegAmbulance = () => {
     return (
     <>
@@ -42,11 +40,11 @@ const RegAmbulance = () => {
                         <input type="text" placeholder='Country'/>
                     </div>
                     <div className="input-field">
-                    <img src={cityImg} alt="city"/>
+                        <img src={cityImg} alt="city"/>
                         <input type="text" placeholder='City'/>
                     </div>
                     <div className="input-field">
-                    <img src={ambulance} alt="ambulance"/>
+                        <img src={ambulance} alt="ambulance"/>
                         <input type="text" placeholder='Ambulances Available'/>
                     </div>
                 </div>
