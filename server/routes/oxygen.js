@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Oxygen = require("../models/Oxygen");
+const {Oxygen} = require("../models/Oxygen");
 
 //* Route 1
 router.get("/oxygen", async (req, res) => {
@@ -15,16 +15,18 @@ router.get("/oxygen", async (req, res) => {
 //* Route 2
 router.post("/oxygen", async (req, res) => {
   try {
-    const { Name, Phone_no, Address, City } = req.body;
-    const oxydata = Oxygen({
-      Name: Name,
-      Phone_no: Phone_no,
-      Address: Address,
-      City: City,
+    const { name, phone, city, address, country } = req.body.formData;
+    const oxydata = new Oxygen({
+      name: name,
+      phone: phone,
+      city: city,
+      address: address,
+    country: country,
     });
     await oxydata.save();
     res.status(200).json(oxydata);
   } catch (e) {
+    res.status(500);
     console.log(`Error in creating a event: ${e}`);
   }
 });

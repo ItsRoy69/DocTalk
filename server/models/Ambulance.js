@@ -2,23 +2,31 @@ const mongoose = require("mongoose");
 
 const Ambulance = new mongoose.Schema(
   {
-    Driver_Name: {
+    name: {
       required: false,
       type: String,
     },
-    Phone_no: {
+    phone: {
       required: false,
       type: String,
     },
-    City: {
+    city: {
       required: false,
       type: String,
     },
-    Address: {
+    address: {
       required: false,
       type: String,
     },
-    Ambulance_no: {
+    country: {
+      required: false,
+      type: String,
+    },
+    hospital_name:{
+      required: false,
+      type: String,
+    },
+    ambulances_available:{
       required: false,
       type: String,
     },
@@ -26,6 +34,4 @@ const Ambulance = new mongoose.Schema(
   { timestamps: true }
 );
 
-const model = mongoose.model("Ambulance", Ambulance);
-
-module.exports = model;
+module.exports.Ambulance = mongoose.model("Ambulance", Ambulance);
