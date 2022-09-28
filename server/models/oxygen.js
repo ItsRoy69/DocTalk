@@ -2,31 +2,28 @@ const mongoose = require("mongoose");
 
 const Oxygen = new mongoose.Schema(
   {
-    Name: {
+    name: {
       required: false,
       type: String,
     },
-    Phone_no: {
-      required: false,
-      type: Number,
-    },
-    Address: {
+    phone: {
       required: false,
       type: String,
     },
-    City: {
+    city: {
       required: false,
       type: String,
     },
-
-    Alt_Phone: {
+    address: {
       required: false,
-      type: Number,
+      type: String,
+    },
+    country: {
+      required: false,
+      type: String,
     },
   },
   { timestamps: true }
 );
 
-const model = mongoose.model("Oxygen", Oxygen);
-
-module.exports = model;
+module.exports.Oxygen = mongoose.model("Oxygen", Oxygen);
