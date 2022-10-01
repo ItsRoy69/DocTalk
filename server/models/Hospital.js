@@ -1,42 +1,37 @@
 const mongoose = require("mongoose");
 
-const Beds = new mongoose.Schema(
+const Hospital = new mongoose.Schema(
   {
-    Hospital_Name: {
-      required: false,
-      type: String,
-      max: 32,
-    },
-    Person_Name: {
-      required: false,
-      type: String,
-      max: 32,
-    },
-    Phone_no: {
+    name: {
       required: false,
       type: String,
     },
-    City: {
-      required: false,
-      type: String,
-      max: 32,
-    },
-    // Address: {
-    //   required: false,
-    //   type: String,
-    // },
-    ICU_Beds: {
+    phone: {
       required: false,
       type: String,
     },
-    Oxygen_Beds: {
+    city: {
       required: false,
-      type: Number,
+      type: String,
+    },
+    address: {
+      required: false,
+      type: String,
+    },
+    country: {
+      required: false,
+      type: String,
+    },
+    hospital_name:{
+      required: false,
+      type: String,
+    },
+    beds_available:{
+      required: false,
+      type: String,
     },
   },
   { timestamps: true }
 );
 
-const model = mongoose.model("Beds", Beds);
-
-module.exports = model;
+module.exports.Hospital = mongoose.model("Hospital", Hospital)

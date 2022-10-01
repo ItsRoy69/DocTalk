@@ -54,6 +54,7 @@ const RegAmbulance = () => {
             console.log(e);
         });
     }
+    
     return (
     <>
         <Navbar />

@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-// const { createHospital, getHospital } = require("../controllers/Hospital");
-const Hospital = require("../models/Beds");
+const {Hospital} = require("../models/Hospital");
 
 //* Route 1
 router.get("/hospitals", async (req, res) => {
@@ -13,22 +12,23 @@ router.get("/hospitals", async (req, res) => {
   }
 });
 
-//   const [hpbed, sethpbed] = useState({ hname: "", pname: "", ph: "", city: "kolkata", beds: "" })
-
 //* Route 2
 router.post("/hospitals", async (req, res) => {
   try {
-    const { Hospital_Name, Person_Name, Phone_no, City, ICU_Beds } = req.body;
-    const hospitaldata = Hospital({
-      Hospital_Name: Hospital_Name,
-      Person_Name: Person_Name,
-      Phone_no: Phone_no,
-      City: City,
-      ICU_Beds: ICU_Beds,
+    const { name, phone, city, address, country, hospital_name,beds_available } = req.body.formData;
+    const hospitaldata = new Hospital({
+      name: name,
+      phone: phone,
+      city: city,
+      address: address,
+      hospital_name: hospital_name,
+      country: country,
+      beds_available: beds_available,
     });
     await hospitaldata.save();
     res.status(200).json(hospitaldata);
   } catch (e) {
+    res.status(500)
     console.log(`Error in creating a event: ${e}`);
   }
 });
