@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Meds = require("../models/Meds");
+const {Meds} = require("../models/Meds");
 
 //* Route 1
 router.get("/meds", async (req, res) => {
@@ -17,17 +17,18 @@ router.get("/meds", async (req, res) => {
 //* Route 2
 router.post("/meds", async (req, res) => {
   try {
-    const { Medicine, Name, Phone_no, City, Address } = req.body;
-    const medsdata = Meds({
-      Medicine: Medicine,
-      Name: Name,
-      Phone_no: Phone_no,
-      City: City,
-      Address: Address,
+    const { name, phone, city, address, country } = req.body.formData;
+    const medsdata = new Meds({
+      name: name,
+      phone: phone,
+      city: city,
+      address: address,
+      country: country,
     });
     await medsdata.save();
     res.status(200).json(medsdata);
   } catch (e) {
+    res.status(500);
     console.log(`Error in creating a event: ${e}`);
   }
 });

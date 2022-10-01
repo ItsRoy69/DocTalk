@@ -21,7 +21,7 @@ router.post("/oxygen", async (req, res) => {
       phone: phone,
       city: city,
       address: address,
-    country: country,
+      country: country,
     });
     await oxydata.save();
     res.status(200).json(oxydata);

@@ -2,23 +2,23 @@ const mongoose = require("mongoose");
 
 const Meds = new mongoose.Schema(
   {
-    Medicine: {
+    name: {
       required: false,
       type: String,
     },
-    Name: {
+    phone: {
       required: false,
       type: String,
     },
-    Phone_no: {
+    city: {
       required: false,
       type: String,
     },
-    City: {
+    address: {
       required: false,
       type: String,
     },
-    Address: {
+    country: {
       required: false,
       type: String,
     },
@@ -26,6 +26,4 @@ const Meds = new mongoose.Schema(
   { timestamps: true }
 );
 
-const model = mongoose.model("Meds", Meds);
-
-module.exports = model;
+module.exports.Meds = mongoose.model("Meds", Meds);
