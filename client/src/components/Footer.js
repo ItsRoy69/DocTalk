@@ -22,40 +22,40 @@ const Footer = () => {
         <div className="footer-section">
           <h3 style={{ fontSize: "25px", fontWeight: "700" }}>Services</h3>
           <p>
-            <Link to="/">Oxygen Supplier</Link>
+            <Link to="/osupplier">Oxygen Supplier</Link>
           </p>
           <p>
-            <Link to="/">Hospital Beds</Link>
+            <Link to="/hospitalbed">Hospital Beds</Link>
           </p>
           <p>
-            <Link to="/">Plasma Donors </Link>
+            <Link to="/plasmadonor">Plasma Donors </Link>
           </p>
           <p>
-            <Link to="/">Ambulance Provider </Link>
+            <Link to="/ambulances">Ambulance Provider </Link>
           </p>
           <p>
-            <Link to="/">Medicines </Link>
+            <Link to="/medicines">Medicines </Link>
           </p>
           <p>
-            <Link to="/">Doctors </Link>
+            <Link to="/doctors">Doctors </Link>
           </p>
         </div>
         <div className="footer-section">
           <h3 style={{ fontSize: "25px", fontWeight: "700" }}>Help</h3>
           <p>
-            <Link to="/">Oxygen Supplier</Link>
+            <Link to="/regoxygensuppliers">Oxygen Supplier</Link>
           </p>
           <p>
-            <Link to="/">Hospital Beds</Link>
+            <Link to="/reghospitalbed">Hospital Beds</Link>
           </p>
           <p>
-            <Link to="/">Donate your Plasma </Link>
+            <Link to="/donateplasma">Donate your Plasma </Link>
           </p>
           <p>
-            <Link to="/ambulances">Ambulances </Link>
+            <Link to="/regambulances">Ambulances </Link>
           </p>
           <p>
-            <Link to="/">Medicine Supply </Link>
+            <Link to="/regmedicines">Medicine Supply </Link>
           </p>
           <p>
             <Link to="/doctorsregistration">Register as Doctor </Link>
