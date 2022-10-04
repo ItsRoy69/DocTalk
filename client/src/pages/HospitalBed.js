@@ -8,9 +8,6 @@ import HospitalBedDetails from "../components/HospitalBedDetails";
 const { Option } = Select;
 
 const HospitalBed = () => {
-  const [secondColumnStart, setSecondColumnStart] = useState(
-    Math.floor(hospitalBedData[0].hospitalBeds.length / 2)
-  );
   const [hospitalBedDataList, setHospitalBedDataList] = useState(
     hospitalBedData[0].hospitalBeds
   );
@@ -21,9 +18,6 @@ const HospitalBed = () => {
     );
 
     setHospitalBedDataList(newHospitalBedDetailsArr[0].hospitalBeds);
-    setSecondColumnStart(
-      Math.floor(newHospitalBedDetailsArr[0].hospitalBeds.length / 2)
-    );
   };
 
   return (
@@ -49,15 +43,14 @@ const HospitalBed = () => {
           </Select>
         </div>
       </div>
-      <div className="rows">
-        <div className="column">
-          {hospitalBedDataList.slice(0, secondColumnStart).map((item, idx) => {
-            return <HospitalBedDetails {...item} key={idx} />;
-          })}
-        </div>
-        <div className="column">
-          {hospitalBedDataList.slice(secondColumnStart).map((item, idx) => {
-            return <HospitalBedDetails {...item} key={idx} />;
+      <div className="grid">
+        <div className="row">
+          {hospitalBedDataList.map((item, idx) => {
+            return (
+              <div className="col-4">
+              <HospitalBedDetails {...item} key={idx} /> 
+              </div>
+            );
           })}
         </div>
       </div>
