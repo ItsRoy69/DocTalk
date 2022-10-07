@@ -1,35 +1,28 @@
 const express = require("express");
 const router = express.Router();
-const {Ambulance} = require("../models/Ambulance");
+const formValidator = require("../middleware/formValidator");
+const { Ambulance } = require("../models/Ambulance");
 
-//* Route 1
+// Get all ambulances
 router.get("/ambulance", async (req, res) => {
   try {
-    const allambu = await Ambulance.find({});
-    return res.json(allambu);
+    const ambulances = await Ambulance.find({});
+    res.status(200).json(ambulances);
   } catch (error) {
-    return res.status(500);
+    res.status(500);
   }
 });
 
-//* Route 2
-router.post("/ambulance", async (req, res) => {
+// Add new ambulance data
+router.post("/ambulance",formValidator, async (req, res) => {
   try {
-    const { name, phone, city, address, country, hospital_name,ambulances_available } = req.body.formData;
-    const ambulancedata = new Ambulance({
-      name: name,
-      phone: phone,
-      city: city,
-      address: address,
-      hospital_name: hospital_name,
-      country: country,
-      ambulances_available: ambulances_available,
+    const data = await new Ambulance(req.body.formData).save();
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message
     });
-    await ambulancedata.save();
-    res.status(200).json(ambulancedata);
-  } catch (e) {
-    res.status(500)
-    console.log(`Error in creating a event: ${e}`);
   }
 });
 

@@ -1,98 +1,80 @@
 const router = require("express").Router();
 const {Doctor} = require("../models/Doctor");
 const { hashPassword,comparePassword } = require("../utils/bcrypt");
+const formValidator = require('../middleware/formValidator');
 
-
-//* Route 1
+// Get all doctors
 router.get("/doctor", async (req, res) => {
-    try {
-      const alldoctors = await Doctor.find({});
-      return res.json(alldoctors);
-    } catch (error) {
-      return res.status(500);
-    }
-  });
-
-// Registering a doctor
-//* Route 2
-
-router.post("/doctor", async (req, res) => {
-    const { firstName, lastName, email, password, country, phone, city, hospital_name, speciality } = req.body.formData;
-    if(!firstName || !lastName || !email || !password || !country || !phone || !city || !hospital_name || !speciality ){
-      return res.status(401).json({
-        success: false,
-        message: "all fields are required!"
-      });
-    };
-
-    //checking if email is taken
-    const existingDoctor = await Doctor.findOne({ email: email });
-    if (existingDoctor) {
-      return res.status(400).json({
-          success: false,
-          message: "email already exists!"
-      });
-    };
-
-    const doctor = new Doctor({
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: hashPassword(password),
-      country: country,
-      phone: phone,
-      city: city,
-      hospital_name: hospital_name,
-      speciality: speciality
-    });
-
-    doctor.save().then((doctor) => {
-      res.status(201).json({
-          success: true,
-          message: "doctor saved successfully!",
-          doctor: doctor
-      })
-    }).catch(err => {
-      res.status(500).json({
-          success: false,
-          message: err.message
-      });
-    });
+  try {
+    const doctors = await Doctor.find({});
+    res.status(200).json(doctors);
+  } catch (error) {
+    res.status(500);
+  }
 });
 
-//*Route 3
-//Doctor login
+// Registering a doctor
+router.post("/doctor", formValidator, async (req, res) => {
+  try {
+    // checking if email is taken
+    const existingDoctor = await Doctor.findOne({ email: req.body.formData.email });
+    if (existingDoctor) {
+      throw {
+        statusCode: 400,
+        message: "email already exists!"
+      };
+    };
 
-router.post("/login/doctor",async(req,res)=>{
-  const {email,password} = req.body.formData;
-  if(!email||!password){
-      return res.status(401).json({
-          success:false,
-          message:"all fields are required!"
-      });
-  };
+    const doctor = await new Doctor({
+      ...req.body.formData,
+      password: hashPassword(req.body.formData.password),
+    }).save();
 
-  const doctor =await Doctor.findOne({email:email});
-  if(!doctor){
-      return res.status(401).json({
-          success:false,
-          message:"incorrect username or password!"
-      });
-  };
+    res.status(201).json({
+      success: true,
+      message: "doctor saved successfully!",
+      doctor: doctor
+    });
+  }
+  catch (error) {
+    res.status(error.statusCode || 500).json({
+      success: false,
+      message: error.message
+    });
+  }
+});
 
-  const isMatch=comparePassword(password,doctor.password);
-  if(!isMatch){
-      return res.status(401).json({
-          success:false,
-          message:"incorrect username or password!"
-      });
-  };
+// Doctor login
+router.post("/login/doctor", formValidator, async (req, res) => {
+  try {
+    const doctor = await Doctor.findOne({ email: req.body.formData.email });
+    if (!doctor) {
+      throw {
+        statusCode: 400,
+        message: "email not registered!"
+      };
+    }
 
-  res.status(200).json({
-      success:true,
-      message:"doctor logged in successfully!",
-      doctor:doctor
-  });
+    const isMatch = comparePassword(req.body.formData.password, doctor.password);
+    if (!isMatch) {
+      throw {
+        statusCode: 400,
+        message: "incorrect password!"
+      };
+    };
+  
+    res.status(200).json({
+      success: true,
+      message: "doctor logged in successfully!",
+      doctor: doctor
+    });
+  }
+  catch (error) {
+    return res.status(error.statusCode || 500).json({
+      success: false,
+      message: error.message
+    });
+  }
 });
 
 module.exports = router;

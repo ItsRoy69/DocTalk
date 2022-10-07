@@ -1,35 +1,29 @@
 const express = require("express");
 const router = express.Router();
-const {Meds} = require("../models/Meds");
+const formValidator = require("../middleware/formValidator");
+const { Meds } = require("../models/Meds");
 
-//* Route 1
+// Get all meds
 router.get("/meds", async (req, res) => {
   try {
-    const allmeds = await Meds.find({});
-    return res.json(allmeds);
+    const meds = await Meds.find({});
+    res.status(200).json(meds);
   } catch (error) {
-    return res.status(500);
+    res.status(500);
   }
 });
 
-//   mname: "", pname: "", ph: "", address: "", city: "")
-
-//* Route 2
-router.post("/meds", async (req, res) => {
+// Add new medicine data
+// mname: "", pname: "", ph: "", address: "", city: "")
+router.post("/meds", formValidator, async (req, res) => {
   try {
-    const { name, phone, city, address, country } = req.body.formData;
-    const medsdata = new Meds({
-      name: name,
-      phone: phone,
-      city: city,
-      address: address,
-      country: country,
+    const data = await new Meds(req.body.formData).save();
+    res.status(201).json(data);
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
     });
-    await medsdata.save();
-    res.status(200).json(medsdata);
-  } catch (e) {
-    res.status(500);
-    console.log(`Error in creating a event: ${e}`);
   }
 });
 
