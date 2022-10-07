@@ -29,3 +29,32 @@
 - Don't forget to attach **`Screenshots, Proper Description and Issue Number` in the Pull request**
 
 <br/>
+
+
+# Docker setup guidelines 🚀
+
+## Prerequisite
+
+- Install Docker Desktop
+
+## Step 1 - Clone the repository
+
+```
+ git clone https://github.com/ItsRoy69/DocTalk
+```
+
+## Step 2 - Change directory to DocTalk
+
+```
+ cd DocTalk
+```
+## Step 3 - Run docker compose file
+
+```
+docker-compose up -d --build
+```
+
+## Step 4 - Open in browser
+
+`visit localhost:3000 to run the app`
+
