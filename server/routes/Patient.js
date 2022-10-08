@@ -1,93 +1,80 @@
 const {Patient} = require("../models/Patient");
 const router = require("express").Router();
-const { hashPassword,comparePassword } = require("../utils/bcrypt");
+const formValidator = require("../middleware/formValidator");
+const { hashPassword, comparePassword } = require("../utils/bcrypt");
 
-//* Route 1
+// Get all patiens
 router.get("/patient", async (req, res) => {
     try {
-        const allpatients = await Patient.find({});
-        return res.json(allpatients);
+        const patients = await Patient.find({});
+        res.status(200).json(patients);
     } catch (error) {
-        return res.status(500);
+        res.status(500);
     }
 });
 
-//*Route 2
-//Registering a patient
+// Registering a patient
+router.post("/patient", formValidator, async (req, res) => {
+    try {
+        // Checking if email is taken
+        const existingPatient = await Patient.findOne({ email: req.body.formData.email });
+        if (existingPatient) {
+            throw {
+                statusCode: 400,
+                message: "email already exists!"
+            };
+        };
+    
+        const patient = await new Patient({
+            ...req.body.formData,
+            password: hashPassword(req.body.formData.password),
+        }).save();
 
-router.post("/patient", async (req, res) => {
-    const { firstName, lastName, email, password, illness, exactLocation } = req.body.formData;
-    if (!firstName || !lastName || !email || !password || !illness || !exactLocation) {
-        return res.status(401).json({
-            success: false,
-            message: "all fields are required!"
-        });
-    };
-    //checking if email is taken
-    const existingPatient = await Patient.findOne({ email: email });
-    if (existingPatient) {
-        return res.status(400).json({
-            success: false,
-            message: "email already exists!"
-        });
-    };
-
-    const patient = new Patient({
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        password: hashPassword(password),
-        illness: illness,
-        exactLocation: exactLocation
-    });
-
-    patient.save().then((patient) => {
         res.status(201).json({
             success: true,
             message: "patient saved successfully!",
             patient: patient
         });
-    }).catch(err => {
-        res.status(500).json({
+    }
+    catch (error) {
+        res.status(error.statusCode || 500).json({
             success: false,
-            message: err.message
+            message: error.message
         });
-    });
+    }
 });
 
-//*Route 3
-//Patient login
-
-router.post("/login/patient",async(req,res)=>{
-    const {email,password} = req.body.formData;
-    if(!email||!password){
-        return res.status(401).json({
-            success:false,
-            message:"all fields are required!"
+// Patient login
+router.post("/login/patient", formValidator, async (req, res) => {
+    try {
+        const patient = await Patient.findOne({ email: req.body.formData.email });
+        if (!patient) {
+            throw {
+                statusCode: 400,
+                message: "email not registered!"
+            };
+        };
+    
+        const isMatch = comparePassword(req.body.formData.password, patient.password);
+        if (!isMatch) {
+            throw {
+                statusCode: 400,
+                message: "incorrect password!"
+            };
+        };
+    
+        res.status(200).json({
+            success: true,
+            message: "patient logged in successfully!",
+            patient: patient
         });
-    };
-
-    const patient =await Patient.findOne({email:email});
-    if(!patient){
-        return res.status(401).json({
-            success:false,
-            message:"incorrect username or password!"
+    }
+    catch (error) {
+        res.status(error.statusCode || 500).json({
+            success: false,
+            message: error.message
         });
-    };
-
-    const isMatch=comparePassword(password,patient.password);
-    if(!isMatch){
-        return res.status(401).json({
-            success:false,
-            message:"incorrect username or password!"
-        });
-    };
-
-    res.status(200).json({
-        success:true,
-        message:"patient logged in successfully!",
-        patient:patient
-    });
+    }
 });
 
 module.exports = router;
