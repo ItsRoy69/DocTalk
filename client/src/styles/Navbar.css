@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: space-between;
   height: 5rem;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #fff;
 }
 
 .navbar__slogan {
@@ -67,13 +71,19 @@
   gap: 5px;
 }
 
+.navbar__hamburger-menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
 .navbar__hamburger-menu span {
   all: unset;
   display: block;
   height: 3px;
   width: 2rem;
   background-color: black;
-  cursor: pointer;
 }
 
 .navbar__mobile-side-nav {
@@ -86,16 +96,28 @@
   overflow: hidden;
   z-index: 99999;
   transition: 0.2s;
+  display: flex;
+  align-items: center;
+  transition: all 0.7s ease;
 }
 
 .navbar__mobile-side-nav__exit {
   color: white;
   padding: 1rem;
-  align-self: flex-end;
+  font-size: 1.3rem;
   text-align: center;
   font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem 1.5rem;
   cursor: pointer;
   width: 3rem;
+}
+
+.navbar__mobile-side-nav-container {
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .navbar__mobile-side-nav ul {
@@ -107,9 +129,7 @@
 }
 
 .navbar__mobile-side-nav ul li {
-  /* background-color: white; */
-  /* padding: 1rem; */
-  transition: 0.2s;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
@@ -118,8 +138,6 @@
   padding: 1rem;
   color: white;
   display: block;
-
-  /* background-color: green; */
 }
 
 .navbar__mobile-side-nav ul li:hover {
