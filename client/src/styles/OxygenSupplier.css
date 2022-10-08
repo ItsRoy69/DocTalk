@@ -5,32 +5,94 @@
 
 body {
   font-family: "Montserrat";
-  margin: auto;
 }
-
+/* head container starts */
 .head-container {
+  display: flex;
+  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../assets/images/oxygenSupplierBannerImage.jpg);
   height: 50%;
-  padding: 220px 200px 180px 200px;
-  display: block;
+  padding-bottom: 8vw;
+  padding-left: 2vw;
   background-position: center;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
 }
 
+.head-container .search-container {
+  display:flex;
+  align-items: center;
+  padding: 8px;
+  justify-content: space-between;
+  width: 90% !important;
+  margin-left: 10px;
+}
+
+.oxygenSupplierHeading {
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  color: white;
+  line-height: 54px;
+  display: flex;
+  align-self: center;
+  padding-top: 10px;
+  margin-top: 2vw;
+}
+
+/* search box starts */
 .searchBar {
   background: white;
   border-radius: 5px;
-  padding: 15px;
   display: flex;
-  transform: translate(-50%, -50%);
-  width: 700px;
+  /* transform: translate(-50%, -50%); */
   font-weight: bold;
   letter-spacing: 2px;
   font-family: "Montserrat";
+  line-height: 30px;
+  align-items: center;
+  justify-self: right;
+  width: 25vw !important;
 }
 
+.head-container .search-container .searchBar .searchIcon {
+  padding: 0.5vw;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.oxygenSupplierSelectBox{
+  width: 35vw;
+}
+/* select box ends */
+
+/* head-container ends */
+
+/* loading container starts*/
 .loading-container {
-  margin: 0.5rem 0;
+  display: block;
+  margin: 0.5rem 5rem;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2vw ;
+  padding-right: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+/* oxygen supplier box begins */
+.oxygenSupplier-container {
+  display: flex;
+  justify-content: space-between;
+  background: #3832F3;
+  box-shadow: inset -100px 0px 80px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  margin: 1.4rem 0;
+  padding: 1.4rem 4rem;
+  align-items: center;
 }
 
 .info {
@@ -42,23 +104,33 @@ body {
   font-family: "Montserrat";
   font-weight: bold;
   color: white;
-  font-size: 2.4rem;
-  text-align: center;
+  font-size: 2.0rem;
+  text-align: left;
+  float: left;
 }
 
-.oxygenSupplier-container .details h5 {
+.oxygenSupplierImage {
+  margin-top: 2.5vw;
+  margin-left: 2vw;
+  float: right; 
+}
+
+.details .info h5 {
   font-family: "Montserrat";
   font-weight: 900;
   color: #ffffff;
-}
-
-.address h5 {
+  margin-left: 2px;
+  padding-left: 5px;
   padding-right: 5px;
+  line-height: 30px;
 }
+/* oxygen supplier box ends */
+
+/* loading container ends */
+
 
 /* Mobile responsive mode only */
-
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .head-container {
     height: 50%;
     padding: 150px 150px 100px 150px;
@@ -68,5 +140,41 @@ body {
     width: 350px;
     margin-bottom: 0px;
     font-size: 1.7rem;
+    line-height: 10px;
+  }
+  .loading-container{
+    margin: 0px;
+    width: 100% !important ;
+  }
+  .head-container{
+    margin: 0px;
+    padding: 0px;
+  }
+  .search-container .oxygenSupplierHeading {
+    font-size: 20px;
+    word-wrap: normal;
+  }
+  .search-container .searchBar .searchIcon{
+    display: none;
+  }
+  .search-container .searchBar {
+    font-size: 10px;
+  }
+  .details{
+    flex-wrap: wrap;
+    width: fit-content;
+  }
+  .supplier-name {
+    display: none;
+  }
+  .info{
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1500px) {
+  .oxygenSupplierImage {
+    display: none;
   }
 }
