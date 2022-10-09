@@ -1,9 +1,9 @@
 <p align="center">
 
-![Doctalk](https://user-images.githubusercontent.com/78967360/173169858-6e8af0e8-41c5-4f8a-9db6-717e6fac2d04.png)
+![Doctalk](https://user-images.githubusercontent.com/63533466/194738256-251e4121-841b-463d-b41e-db714b7224b0.png)
 
    <h3 align="center">DocTalk</h3>
-   <p align="center">MediHelp just a click away</p>
+   <p align="center">MedHelp just a click away</p>
 </p>
 
 <div align="center">
@@ -12,7 +12,7 @@
 
 ## What is DocTalk ? 🤔
 
-DocTalk is a website where one can arrive at for any doctor or medical-related problems and we will be catering to all of them. Be it ambulances, blood, plasma, oxygen cylinders, hospital beds, medicines - we have you covered. Just click on our website and you will be relieved of your medical-related stress.
+DocTalk is your ultimate medical help space. Here, at DocTalk you will be helped with all the services catering towards the medical field like plasma donors, hospital beds, oxygen suppliers, medicine suppliers and ambulance providers. DocTalk is your one step solution. Just log into your account and book your appointment right away. You can even call us for your appointment, and we will get back to you shortly.
 
 ## Willing to help ? 👩🏻‍💻
 
