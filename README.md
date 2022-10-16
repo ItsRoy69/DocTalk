@@ -19,7 +19,7 @@ DocTalk is a website where one can arrive at for any doctor or medical-related p
 **A beginner to Open Source, Web Development ?**  
 <br/>
 
-This might be the debut repo for you , you can contribute to this repo , solve the issues, raise one and learn more about web as well as get started with Open Source and contributing to projects. Remember , we believe in **Quality**.
+This might be the debut repo for you, you can contribute to this repo, solve the issues, raise one and learn more about web as well as get started with Open Source and contributing to projects. Remember, we believe in **Quality**.
 
 ---
 
