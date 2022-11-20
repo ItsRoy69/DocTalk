@@ -26,7 +26,7 @@ const App = () => {
         <ScrollToTop />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/plasmadonor" element={<PlasmaDonor />} />
+          <Route exact pah="/plasmadonor" element={<PlasmaDonor />} />
           <Route exact path="/hospitalbed" element={<HospitalBed />} />
           <Route exact path="/osupplier" element={<OxygenSupplier />} />
           <Route exact path="/ambulances" element={<Ambulances />} />
