@@ -10,6 +10,7 @@ const OxygenRoutes = require("./routes/Oxygen");
 const AmbulanceRoutes = require("./routes/Ambulance");
 const PatientRoutes = require('./routes/Patient');
 const DoctorRoutes = require("./routes/Doctor");
+const ContactRoutes = require("./routes/Contact");
 var cors = require("cors");
 
 const PORT = 5000;
@@ -52,6 +53,7 @@ app.use(OxygenRoutes);
 app.use(AmbulanceRoutes);
 app.use(PatientRoutes);
 app.use(DoctorRoutes);
+app.use(ContactRoutes);
 
 app.listen(PORT, () => {
   console.log("server is listening at port 5000");

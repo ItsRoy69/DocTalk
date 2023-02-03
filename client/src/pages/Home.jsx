@@ -17,10 +17,11 @@ import helpingHand5 from "../assets/images/helpingHand5.png";
 import helpingHand6 from "../assets/images/helpingHand6.png";
 import user from "../assets/images/user.png";
 import emailImg from "../assets/images/email.png";
-import subject from "../assets/images/subject.png";
-import message from "../assets/images/message.png";
+import subjectImg from "../assets/images/subject.png";
+import messageImg from "../assets/images/message.png";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
+import { useEffect, useState } from "react";
 
 const ServiceCard = ({ title, image, link }) => (
   <div className="service-box" style={{ backgroundImage: `url(${image})` }}>
@@ -48,8 +49,49 @@ const HelpingCard = ({ title, image, hover, desc, link }) => (
   </div>
 );
 
-const Home = () => (
-  <>
+function Home(){
+
+    const [formData, setFormData] = useState();
+    const [firstName, setFirstName] = useState();
+    const [lastName, setLastName] = useState();
+    const [email, setEmail] = useState();
+    const [subject, setSubject] = useState();
+    const [message, setMessage] = useState();
+
+  function handleSubmit(){
+    const request = {
+        method:'POST',
+        mode:'cors',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        redirect:'follow',
+        referrerPolicy:'no-referrer',
+        body: JSON.stringify({formData})
+    };
+
+    const myRequest = new Request("http://localhost:5000/contact",request);
+    fetch(myRequest).then(function (response) {
+        return response;
+    }).then(function (response) {
+        console.log(response);
+    }).catch(function (e) {
+        console.log(e);
+    });
+}
+
+
+useEffect(()=>{
+setFormData({
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    subject: subject,
+    message: message
+});
+},[firstName, lastName, email, subject, message]);
+  return(
+    <>
     <Navbar />
     <div className="container">
       <div className="heading" id="home">
@@ -164,15 +206,15 @@ const Home = () => (
                 <input
                   type="text"
                   className="contact__form__name"
-                  placeholder="FirstName"
+                  placeholder="FirstName" value={firstName} onChange={(e)=>{setFirstName(e.target.value)}}
                 />
               </div>
               <div className="input_container">
-                <img src={user} alt="last-name" />
+                <img src={user} alt="last-name"/>
                 <input
                   type="text"
                   className="contact__form__name"
-                  placeholder="LastName"
+                  placeholder="LastName" value={lastName} onChange={(e)=>{setLastName(e.target.value)}}
                 />
               </div>
             </div>
@@ -181,25 +223,28 @@ const Home = () => (
               <input
                 type="email"
                 className="contact__form__email"
-                placeholder="Email"
+                placeholder="Email" value={email}
+                onChange={(e)=>{setEmail(e.target.value)}}
               />
             </div>
             <div className="input_container">
-              <img src={subject} alt="subject" />
+              <img src={subjectImg} alt="subject" />
               <input
                 type="text"
                 className="contact__form__subject"
-                placeholder="Subject"
+                placeholder="Subject" value={subject}
+                onChange={(e)=>{setSubject(e.target.value)}}
               />
             </div>
             <div className="input_container">
-              <img src={message} alt="message" />
+              <img src={messageImg} alt="message" />
               <textarea
                 className="contact__form__message"
-                placeholder="Message"
+                placeholder="Message" value={message}
+                onChange={(e)=>{setMessage(e.target.value)}}
               />
             </div>
-            <button className="contact__form__button" type="submit">
+            <button className="contact__form__button" type="submit" onClick={handleSubmit}>
               Contact
             </button>
           </div>
@@ -211,6 +256,7 @@ const Home = () => (
     </div>
     <Footer />
   </>
-);
+  )
+}
 
 export default Home;
