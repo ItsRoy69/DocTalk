@@ -1,16 +1,16 @@
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
-import logo from "../assets/images/logo.png";
-import "../styles/Navbar.css";
+import React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import logo from '../assets/images/logo.png';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <nav className="navbar">
-      <Link to="/" style={{ color: "inherit" }}>
+      <Link to="/" style={{ color: 'inherit' }}>
         <div className="navbar__slogan">
           <div className="navbar__slogan__logo">
             <img src={logo} alt="logo" />
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
       <div
         className={`navbar__mobile-side-nav ${
-          showMenu ? "navbar__mobile-side-nav--show" : ""
+          showMenu ? 'navbar__mobile-side-nav--show' : ''
         }`}
       >
         <div
@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`navbar__shadow ${showMenu ? "navbar__shadow--show" : ""}`}
+        className={`navbar__shadow ${showMenu ? 'navbar__shadow--show' : ''}`}
         onClick={() => setShowMenu(false)}
       ></div>
     </nav>
