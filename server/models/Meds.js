@@ -22,6 +22,10 @@ const Meds = new mongoose.Schema(
       required: false,
       type: String,
     },
+    medName : {
+      require: true,
+      type: String
+    }
   },
   { timestamps: true }
 );

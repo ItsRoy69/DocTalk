@@ -6,7 +6,7 @@ const { Meds } = require("../models/Meds");
 // Get all meds
 router.get("/meds", async (req, res) => {
   try {
-    const meds = await Meds.find({});
+    const meds = await Meds.find();
     res.status(200).json(meds);
   } catch (error) {
     res.status(500);
