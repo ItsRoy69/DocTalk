@@ -22,10 +22,18 @@ const Meds = new mongoose.Schema(
       required: false,
       type: String,
     },
-    medName : {
+    medName: {
       require: true,
-      type: String
-    }
+      type: String,
+    },
+    description: {
+      require: true,
+      type: String,
+    },
+    price: {
+      require: true,
+      type: String,
+    },
   },
   { timestamps: true }
 );
