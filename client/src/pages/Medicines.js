@@ -21,8 +21,8 @@ const Medicines = () => {
       <h1 style={{ textAlign: "center" }}>Medicines</h1>
       <div className="med-container">
         <div className="med-cards">
-          {medsData.map((med) => (
-            <div className="med-card">
+          {medsData.map((med, index) => (
+            <div className="med-card" key={index}>
               <img
                 src="https://images.pexels.com/photos/593451/pexels-photo-593451.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="med"
@@ -34,7 +34,7 @@ const Medicines = () => {
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
                   <h3 style={{ color: "gray" }}>RS.{med.price}</h3>
-                    <button className="med-buy-btn">Buy Now</button>
+                  <button className="med-buy-btn">Buy Now</button>
                 </div>
               </div>
             </div>
