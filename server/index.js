@@ -12,10 +12,13 @@ const PatientRoutes = require('./routes/Patient');
 const DoctorRoutes = require("./routes/Doctor");
 const ContactRoutes = require("./routes/Contact");
 var cors = require("cors");
+const dotenv = require("dotenv");
 
 const PORT = 5000;
 
-require('dotenv').config();
+dotenv.config();
+dotenv.config({ path: './env.env' });
+
 app.use(cors());
 app.use(express.json());
 

@@ -7,6 +7,7 @@ import "../styles/Home.css";
 import Services from "../components/Services";
 import HelpingHand from "../components/HelpingHand";
 import ContactForm from "../components/ContactForm";
+import {useState , useEffect} from 'react'
 
 function Home(){
 
