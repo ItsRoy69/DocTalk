@@ -55,4 +55,13 @@ This might be the debut repo for you, you can contribute to this repo, solve the
 This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
 
 ---
+
+<h3>⭐ Open Source Events ⭐</h3>
+<hr>
+<p align="center">
+    <a href="https://diversion.tech/">
+        <img src="https://raw.githubusercontent.com/acm-iem/Readme-template/main/Logos/Diversion%20Long%20Logo%20Color.png" width=30%">
+        <h4 align="center"> DIVERSION 2k23 </h4>
+    </a>
+</p>
 ## Happy Contributions !!
