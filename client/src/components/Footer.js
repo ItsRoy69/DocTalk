@@ -3,7 +3,7 @@ import "../styles/Footer.css";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
-import { FiTwitter, FiInstagram, FiFacebook } from "react-icons/fi";
+import { FiTwitter, FiInstagram, FiFacebook, FiGithub } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -76,6 +76,11 @@ const Footer = () => {
           <p>
             <Link to="/">
               <FiTwitter /> Twitter{" "}
+            </Link>
+          </p>
+          <p>
+            <Link to="https://github.com/ItsRoy69/DocTalk">
+              <FiGithub /> GitHub
             </Link>
           </p>
         </div>
