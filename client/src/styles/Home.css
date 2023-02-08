@@ -27,6 +27,7 @@
 }
 
 .heading__info__subtitle {
+  padding-top: 8px;
   font-size: clamp(1rem, 2vw, 3rem);
   font-weight: bold;
 }
