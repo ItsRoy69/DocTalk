@@ -33,8 +33,8 @@
 }
 
 /* Get In Touch Button */
-.heading__info__cta {  
-  background-color: #3029ff;  
+.heading__info__cta {
+  background-color: #3029ff;
   border-radius: 30px;
   color: white;
   font-size: clamp(1.1rem, 1vw, 1rem);
@@ -76,7 +76,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
   .heading__info__cta {
     position: relative;
     left: 50%;
@@ -90,7 +90,7 @@
 
 /* ------------------------------- About Us Section ---------------------------------- */
 
-.aboutus { 
+.aboutus {
   background-color: #3029ff;
   padding: 30px 50px;
   border-radius: 20px;
@@ -111,17 +111,17 @@
   justify-content: space-evenly;
 }
 
-.aboutus-text { 
+.aboutus-text {
   font-weight: 500;
   font-size: 20px;
   font-family: "Montserrat";
   line-height: 35px;
   text-align: justify;
-  color: white
+  color: white;
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 600px) {
   .aboutus h4 {
     text-align: center;
     color: white;
@@ -130,23 +130,21 @@
     margin-bottom: 1.5rem;
   }
 
-  .aboutus-text { 
+  .aboutus-text {
     font-weight: 500;
     font-size: 18px;
     font-family: "Montserrat";
     line-height: 30px;
     text-align: justify;
-    color: white
+    color: white;
   }
 
-  .aboutus { 
+  .aboutus {
     background-color: #3029ff;
     padding: 30px 35px;
     border-radius: 20px;
   }
 }
-
-
 
 /* ----------------------------------------------------------------------------------- */
 
@@ -295,22 +293,22 @@
   border: none;
   text-align: center;
   padding: 0.2rem;
-  border: 1px solid #dad9d9;	
+  border: 1px solid #dad9d9;
 }
 .image-container {
-  position:relative;
+  position: relative;
 }
 .image-container img {
-  position:absolute;
+  position: absolute;
   width: 100%;
   transition: opacity 1s ease-in-out;
 }
-.image-container img.top{
+.image-container img.top {
   background-color: white;
   width: 100%;
 }
 .image-container img.top:hover {
-  opacity:0;
+  opacity: 0;
 }
 
 .helping-hand .helping-container .helping-box .view-btn:hover {
@@ -350,8 +348,8 @@
 }
 
 .contact__rightImage {
-	width: 100%;
-  justify-content: center; 
+  width: 100%;
+  justify-content: center;
   display: flex;
 }
 /* Contact Form */
@@ -363,7 +361,7 @@
   gap: 1rem;
   flex-grow: 1;
   font-family: "Montserrat";
-  width: 100%; 
+  width: 100%;
   padding: 0 70px;
 }
 
@@ -379,7 +377,7 @@
   box-shadow: 0px 5px 10px rgba(48, 41, 255, 0.5);
 }
 
-.input_container img{
+.input_container img {
   max-width: 2.5rem;
   max-height: 2.5rem;
 }
@@ -415,7 +413,7 @@
 .contact__form__button {
   border: none;
   outline-style: none;
-  width:20vw;
+  width: 20vw;
   padding: 2vw 5vw;
   border-radius: 10px;
   background-color: black;
@@ -426,7 +424,7 @@
 
 .contact__form__button:hover {
   background-color: rgba(48, 41, 255, 0.5);
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 /* Media Queries */
@@ -445,7 +443,7 @@
 @media (max-width: 1190px) {
   .contact__main {
     flex-direction: column-reverse;
-    max-width:800px; 
+    max-width: 800px;
   }
   .contact {
     justify-content: center;
