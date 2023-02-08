@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import logo from '../assets/images/logo.png';
@@ -10,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" style={{ color: 'inherit' }}>
+      <Link to="/" style={{ color: 'inherit', textDecoration: "none" }}>
         <div className="navbar__slogan">
           <div className="navbar__slogan__logo">
             <img src={logo} alt="logo" />
@@ -57,9 +56,8 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`navbar__mobile-side-nav ${
-          showMenu ? 'navbar__mobile-side-nav--show' : ''
-        }`}
+        className={`navbar__mobile-side-nav ${showMenu ? 'navbar__mobile-side-nav--show' : ''
+          }`}
       >
         <div
           className="navbar__mobile-side-nav__exit"
