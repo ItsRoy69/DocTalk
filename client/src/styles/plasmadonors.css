@@ -136,6 +136,13 @@
     outline: none;
     color: #ffff;
     background: #3029ff;
+    transition: 0.5s;
+}
+
+.search-field-button:hover{
+    background-color: transparent;
+    border: 2px solid #3029ff;
+    color: #3029ff;
 }
 
 /* SEARCH FIELD ENDS */
